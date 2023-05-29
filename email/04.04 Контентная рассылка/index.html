@@ -1,0 +1,448 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Делаем жизнь яркой</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head><body style="margin:0 !important;padding:0;background: url(img/bg.jpg);">
+<center class="wrapper">
+<div class="webkit" style="background: url(img/bgbody.jpg);">
+<table>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0"
+style="border-collapse:collapse;margin:0 auto;padding:0;max-width:600px;min-width:320px;background:url(img/bgbody.jpg);"
+align="center">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" class="sample"
+style="border-collapse:collapse;margin:0 auto;padding:0;max-width:580px;min-width:320px;background: url(img/bg.jpg);"
+align="center">
+<tr>
+<td
+style="display:none !important;visibility:hidden;mso-hide:all;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0;opacity:0;overflow:hidden;">
+&nbsp;Вдохновляемся на ремонт&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;
+</td>
+</tr><tr>
+<td style="padding:0 0 10px; background: url(img/bgbody.jpg);"></td>
+</tr><tr>
+<td align="center">
+<table border="0" cellpadding="0" cellspacing="0"
+style="border-collapse:collapse;margin:0;padding:0;width:100%;max-width:580px;" width="100%">
+<tbody>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0"
+style="border-collapse:collapse;margin:0;padding:0" width="100%">
+<tr>
+<td width="290" height="100">
+<a href="https://www.divan.ru" target="_blank"
+style="display:block;margin:0;padding: 0;text-decoration:none;">
+<img alt="Диван.ру" src="img/logo.png" width="290" height="auto"
+style="display:block;border:0;" />
+</a>
+</td><td width="290" height="100">
+<a href="https://www.divan.ru/idei-i-trendy" target="_blank"
+style="display:block;margin:0;padding: 0;text-decoration:none;">
+<img alt="Диван.ру" src="img/logo_second.jpg" width="300" height="auto"
+style="display:block;border:0;" />
+</a>
+</td>
+</tr>
+</table>
+</td></tr>
+</tbody>
+</table>
+</td>
+</tr><!-- начало - Полоса с текущим балансом -->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0"
+style="border-collapse:collapse;margin:0;padding:0;background:#333333 !important;" width="100%">
+<tr>
+<td style="width:20px"></td>
+<td>
+<table border="0" cellpadding="0" cellspacing="0"
+style="border-collapse:collapse;margin:0;padding:0" width="100%">
+<tr>
+<td style="padding:0 0 10px"></td>
+</tr>
+@{if Recipient.IsInSegment("UchastnikyPL") and
+Recipient.GetBonusPointsAccount("BalanceMain").Total > 0}
+<tr>
+<td
+style="display:block;margin:0;padding:0;text-decoration:none;color:#ffffff;font-size:14px;line-height:21px;text-align:center;font-family:'Verdana',sans-serif;">
+@{if IsEmpty(Recipient.OnlyStandardFirstName)}Ваш
+@{else} ${Recipient.OnlyStandardFirstName }, ваш @{end
+if} баланс
+<a href="https://divan.ru/cabinet/" target="_blank"
+style="color:#ffffff;text-decoration:underline">
+${Recipient.GetBonusPointsAccount("BalanceMain").Available}
+/
+${Recipient.GetBonusPointsAccount("BalanceMain").Total}
+бонусов
+</a>
+</td>
+</tr>
+@{else if Recipient.IsInSegment("UchastnikyPL") and
+Recipient.GetBonusPointsAccount("BalanceMain").Total = 0}
+<tr>
+<td
+style="display:block;margin:0;padding:0;text-decoration:none;color:#ffffff;font-size:14px;line-height:21px;text-align:center;font-family:'Verdana',sans-serif;">
+@{if IsEmpty(Recipient.OnlyStandardFirstName)}У вас
+@{else} ${Recipient.OnlyStandardFirstName }, у вас
+@{end if} пока нет
+<a href="https://www.divan.ru/cabinet/" target="_blank"
+style="color:#ffffff;text-decoration:underline">бонусов.</a>
+</td>
+</tr>
+@{else}
+<tr>
+<td
+style="display:block;margin:0;padding:0;text-decoration:none;color:#ffffff;font-size:14px;line-height:21px;text-align:center;font-family:'Verdana',sans-serif;">
+У вас пока нет бонусов.
+<a href="https://www.divan.ru/site/divan-club" target="_blank"
+style="color:#ffffff;text-decoration:underline">Зарегистрируйтесь.</a>
+</td>
+</tr>
+@{end if}
+<tr>
+<td style="padding:0 0 10px"></td>
+</tr>
+</table>
+</td>
+<td style="width:20px"></td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- конец - Полоса с текущим балансом -->
+<!-- Content -->
+<tr>
+<td style="padding:0 0 48.33px"></td>
+</tr>
+<tr>
+<td align="left">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;padding:0;"
+width="100%">
+<tr>
+<td align="left">
+<img src="img/header_1.png" width="379px"
+style="display:block;border:0;width:100%;max-width:379px;height:auto;padding-left:20px;" alt="Товар" />
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0 48.33px"></td>
+</tr><tr>
+<td align="center">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;padding:0;"
+width="100%">
+<tr>
+<td align="center">
+<a href="https://www.divan.ru/idei-i-trendy/obasnaem-na-kapkejkah-kak-ispolzovat-sinij-cvet-v-interere"
+target="_blank" style="display:block;margin:0;padding:0;text-decoration:none;">
+<img src="img/card_1.jpg" width="542"
+style="display:block;border:0;width:100%;max-width:560px;height:auto;" alt="item" />
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0 48px"></td>
+</tr>
+<tr>
+<td style="padding:0 0 20px; background: url(img/bgbody.jpg);"></td>
+</tr>
+<tr>
+<td style="padding:0 0 48.33px"></td>
+</tr>
+
+<tr>
+  <td align="left">
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;padding:0;"
+  width="100%">
+  <tr>
+  <td align="left">
+  <img src="img/header_2.png" width="451px"
+  style="display:block;border:0;width:100%;max-width:451px;height:auto;padding-left:20px;" alt="Товар" />
+  </td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  <tr><td style="padding:0 0 48.33px"></td></tr>
+  <tr>
+  <td align="center">
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;padding:0;"
+  width="100%">
+  <tr>
+  <td align="center">
+  <a href="https://www.divan.ru/idei-i-trendy/kvartira-arhitektora-85-kvm-s-panoramnymi-oknami-i-detskoj-na-vyrost-interer-dla-teh-kto-ne-boitsa-cveta"
+  target="_blank" style="display:block;margin:0;padding:0;text-decoration:none;">
+  <img src="img/card_2.jpg" width="542"
+  style="display:block;border:0;width:100%;max-width:560px;height:auto;" alt="item" />
+  </a>
+  </td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  <tr>
+  <td style="padding:0 0 48px"></td>
+  </tr>
+  <tr>
+  <td style="padding:0 0 20px; background: url(img/bgbody.jpg);"></td>
+  </tr>
+  <tr>
+  <td style="padding:0 0 48.33px"></td>
+  </tr>
+
+  <tr>
+  <td align="left">
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;padding:0;"
+  width="100%">
+  <tr>
+  <td align="left">
+  <img src="img/header_3.png" width="330px"
+  style="display:block;border:0;width:100%;max-width:330px;height:auto;padding-left:20px;" alt="Товар" />
+  </td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  <tr>
+  <td style="padding:0 0 48.33px"></td>
+  </tr>
+  <tr>
+  <td align="center">
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;padding:0;"
+  width="100%">
+  <tr>
+  <td align="center">
+  <a href="https://www.divan.ru/idei-i-trendy/cvetovye-trendy-vystavki-stockholm-furniture-fair-2023-kotorye-vy-mozete-primenit-pramo-sejcas"
+  target="_blank" style="display:block;margin:0;padding:0;text-decoration:none;">
+  <img src="img/card_3.jpg" width="542"
+  style="display:block;border:0;width:100%;max-width:560px;height:auto;" alt="item" />
+  </a>
+  </td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  <tr>
+    <td style="padding:0 0 48.33px"></td>
+  </tr>
+  <tr>
+  <td style="padding:0 0 20px; background: url(img/bgbody.jpg);"></td>
+  </tr>
+  <tr>
+  <td style="padding:0 0 48.33px"></td>
+  </tr>
+
+  <tr>
+  <td align="center">
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;padding:0;"
+  width="100%">
+  <tr>
+  <td align="center">
+  <a href="https://youtu.be/hkHEZdH24sU"
+  target="_blank" style="display:block;margin:0;padding:0;text-decoration:none;">
+  <img src="img/card_4.jpg" width="542"
+  style="display:block;border:0;width:100%;max-width:560px;height:auto;" alt="item" />
+  </a>
+  </td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  <tr><td style="padding:0 0 48.33px"></td></tr>
+
+  <tr>
+  <td style="padding:0 0 20px; background: url(img/bgbody.jpg);"></td>
+  </tr>
+  <tr>
+  <td style="padding:0 0 48.33px"></td>
+  </tr>
+  <tr>
+  <td align="left">
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;padding:0;"
+  width="100%">
+  <tr>
+  <td align="left">
+  <img src="img/header_4.png" width="191px"
+  style="display:block;border:0;width:100%;max-width:191px;height:auto;padding-left:20px;" alt="Товар" />
+  </td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+
+  <tr>
+  <td style="padding:0 0 48.33px"></td>
+  </tr>
+  
+  <tr>
+  <td align="center">
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;padding:0;"
+  width="100%">
+  <tr>
+  <td align="center">
+  <a href="https://www.divan.ru/idei-i-trendy/kollaboracia-divanru-i-fonda-anton-tut-radom-predmety-interera-kotorye-smagcaut-realnost"
+  target="_blank" style="display:block;margin:0;padding:0;text-decoration:none;">
+  <img src="img/card_5.jpg" width="542"
+  style="display:block;border:0;width:100%;max-width:560px;height:auto;" alt="item" />
+  </a>
+  </td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  <tr><td style="padding:0 0 48.33px"></td></tr>
+
+  <tr>
+  <td style="padding:0 0 20px; background: url(img/bgbody.jpg);"></td>
+  </tr>
+
+  <tr>
+  <td align="center">
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0;padding:0;"
+  width="100%">
+  <tr>
+  <td align="center">
+  <a href="https://www.divan.ru/anton-tut-ryadom"
+  target="_blank" style="display:block;padding:0;text-decoration:none;">
+  <img src="img/card_6.jpg" 
+  style="display:block;border:0;width:100%;max-width:580px;height:auto;" alt="item" />
+  </a>
+  </td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  
+  <tr>
+  <td style="padding:0 0 20px; background: url(img/bgbody.jpg);"></td>
+  </tr>
+<!-- End Content -->
+<!-- +Footer -->
+
+<tr>
+  <td>
+    <table border="0" cellpadding="0" cellspacing="0" style="background-color: white; width: 600px;">
+      <tr><td style="height: 30px"></td></tr>
+      <tr>
+        <td align="center" style="width: 560px;">
+        <table border="0" cellpadding="0" cellspacing="0" style="width: 232px; margin: 0; padding: 0; ">
+        <tbody>
+        <tr>
+        <td style="padding-right: 8px;">
+        <a href="https://t.me/officialdivanru" title="telegram" target="_blank" style="display: block; width: 40px; height: 40px; margin: 0; text-decoration: none;">
+        <img src="img/telegram.png" style="display: block; width: 100%; border: 0; pointer-events: none;" alt="telegram" />
+        </a>
+        </td>
+        <td style="padding-right: 8px;">
+        <a href="https://www.youtube.com/channel/UCHmpEu-ysoKTMZvY9TMHj4g?sub_confirmation=1" title="youtube" target="_blank" style="display: block; width: 40px; height: 40px; margin: 0; text-decoration: none;">
+        <img src="img/youtube.png" style="display: block; width: 100%; border: 0; pointer-events: none;" alt="youtube" />
+        </a>
+        </td>
+        <td style="padding-right: 8px;">
+        <a href="http://vk.com/ilovedivan" title="vk" target="_blank" style="display: block; width: 40px; height: 40px; margin: 0; text-decoration: none;">
+        <img src="img/vk.png" style="display: block; width: 100%; border: 0; pointer-events: none;" alt="vk" />
+        </a>
+        </td>
+        <td style="padding-right: 8px;">
+        <a href="https://dzen.ru/divanru" title="dzen" target="_blank" style="display: block; width: 40px; height: 40px; margin: 0; text-decoration: none;">
+        <img src="img/dzen.png" style="display: block; width: 100%; border: 0; pointer-events: none;" alt="dzen" />
+        </a>
+        </td>
+        <td style="padding-right: 8px;">
+        <a href="https://pin.it/2esrMUt" title="pinterest" target="_blank" style="display: block; width: 40px; height: 40px; margin: 0; text-decoration: none;">
+        <img src="img/pinterest.png" style="display: block; width: 100%; border: 0; pointer-events: none;" alt="pinterest" />
+        </a>
+        </td>                      
+        </tr>
+        </tbody>
+        </table>
+        </td>
+        </tr>
+        <tr><td style="height: 30px"></td></tr>
+        <tr>
+        <td>
+        <a href="https://www.divan.ru/site/delivery" title="divan.ru/site/delivery" target="_blank" style="display: block; width: 560px; height: 77px; margin: 0; padding: 0; text-decoration: none;">
+        <img src="img/delivery_with_stop.gif" style="display: block; width: 560px; height: 77px; border: 0; pointer-events: none;" alt="">
+        </a>
+        </td>
+        </tr>
+        <tr>
+        <td style="width: 520px; display: block; margin: 0 20px; border-bottom: 1px solid #bfbfbf;"></td>
+        </tr>
+        <tr><td style="height: 20px"></td></tr>
+        <tr>
+        <td style="width: 520px; padding: 0 20px;" align="center">
+        <table border="0" cellpadding="0" cellspacing="0" style="width: 520px; margin: 0; padding: 0;" align="center">
+        <tr>
+        <td style="text-align: left;">
+        <a href="https://www.divan.ru/akcii-skidki" target="_blank" style="white-space: nowrap; margin: 0; padding: 0 2px; text-decoration: none; color: #404040; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 11px !important; -webkit-text-size-adjust: none;">
+        Акции
+        </a>
+        </td>
+        <td style="text-align: right;">
+        <a href="https://www.divan.ru/category/divany-i-kresla" target="_blank" style="white-space: nowrap; margin: 0; padding: 0 2px; text-decoration: none; color: #404040; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 11px !important; -webkit-text-size-adjust: none;">
+        Диваны
+        </a>
+        </td>
+        <td style="text-align: right;">
+        <a href="https://www.divan.ru/category/stoly-i-stulya" target="_blank" style="white-space: nowrap; margin: 0; padding: 0 2px; text-decoration: none; color: #404040; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 11px !important; -webkit-text-size-adjust: none;">
+        Столы и стулья
+        </a>
+        </td>
+        <td style="text-align: right;">
+        <a href="https://www.divan.ru/category/kovry-i-tekstil" target="_blank" style="white-space: nowrap; margin: 0; padding: 0 2px; text-decoration: none; color: #404040; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 11px !important; -webkit-text-size-adjust: none;">
+        Ковры и текстиль
+        </a>
+        </td>
+        <td style="text-align: right;">
+        <a href="https://www.divan.ru/category/svet" target="_blank" style="white-space: nowrap; margin: 0; padding: 0 2px; text-decoration: none; color: #404040; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 11px !important; -webkit-text-size-adjust: none;">
+        Освещение
+        </a>
+        </td>
+        </tr>
+        </table>
+        </td>
+        </tr>
+        <tr><td style="height: 30px"></td></tr>
+        <tr>
+        <td align="center" style="width: 520px; padding: 0 20px; text-align: center; font-family: 'Arial', sans-serif; font-size: 14px !important; -webkit-text-size-adjust: none; line-height: 21px; color: #989898;">
+        Вы получили это письмо, потому что подписались на рассылку на сайте divan.ru. Если вы не хотите больше получать наши письма, 
+        <a href="${Message.UnsubscribeLink}" target="_blank" style="width: 520px; color: #157EE9; text-decoration: underline;">
+        отпишитесь.
+        </a>
+        </td>
+        </tr>
+        <tr><td style="height: 15px"></td></tr>
+        <tr>
+        <td align="center" style="width: 520px; padding: 0 20px; text-align: center;">
+        <a href="${Message.AccessibilityLink}" target="_blank" style="display: inline-block; height: 29px; border-bottom: 1px solid #989898; font-family: 'Arial', sans-serif; font-size: 18px !important; -webkit-text-size-adjust: none; line-height: 150%; padding: 0; color: #989898 !important; text-decoration: none; ">
+        Веб-версия
+        </a>
+        </td>
+        </tr>
+        <tr><td style="height:30px"></td></tr>
+  </table>
+</td>
+</tr>
+
+<!-- -Footer -->
+</table>
+</td>
+</tr>
+</table>
+</div>
+</center>
+</body>
+</html>
