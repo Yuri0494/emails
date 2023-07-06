@@ -1,0 +1,624 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Вдохновение во всём!</title>
+</head>
+<body style="margin: 0; background-color: #D1CDCC;">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 600px; margin: 0 auto; padding: 20px; background-color: #D1CDCC;">
+<tbody>
+<!-- +Preheader -->
+<tr>
+<td style="display: none;">
+&nbsp;💡Бюджетные и стильные решения&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;
+</td>
+</tr>
+<!-- -Preheader -->
+<!-- +Content -->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="background-color: #fafafa;">
+
+<!-- +Header-->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="background: url(./img/header/background.jpg);">
+<tbody>
+<tr>
+<td>
+<a href="https://divan.ru/" title="divan.ru" target="_blank" style="text-decoration: none;">
+<img src="img/header/logo.png" style="display: block; width: 300px;" alt="divan.ru" />
+</a>
+</td>
+<td>
+<a href="https://www.divan.ru/idei-i-trendy" title="divan.ru" target="_blank" style="text-decoration: none;">
+<img src="img/header/button.png" style="display: block; width: 300px;" alt="Идеи и тренды" />
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- -Header-->
+
+<!-- +Current balance -->
+<tr style="background-color: #333333;">
+<td align="center" style="background-color: #333333;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;  margin: 0; padding: 0; background-color: #333333;">
+<tr>
+<td style="width: 20px"></td>
+<td>
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 100%; margin: 0; padding: 0;">
+<tr>
+<td style="padding: 0 0 10px"></td>
+</tr>
+@{if Recipient.IsInSegment("UchastnikyPL") and
+Recipient.GetBonusPointsAccount("BalanceMain").Total
+> 0}
+<tr>
+<td
+style="display: block; margin: 0; padding: 0; text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+@{if
+IsEmpty(Recipient.OnlyStandardFirstName)}Ваш
+@{else} ${Recipient.OnlyStandardFirstName }, ваш
+@{end if} баланс
+<a href="https://divan.ru/cabinet/" target="_blank" style="color: #ffffff; text-decoration: underline;">
+${Recipient.GetBonusPointsAccount("BalanceMain").Available}
+/
+${Recipient.GetBonusPointsAccount("BalanceMain").Total}
+бонусов
+</a>
+</td>
+</tr>
+@{else if Recipient.IsInSegment("UchastnikyPL") and
+Recipient.GetBonusPointsAccount("BalanceMain").Total
+= 0}
+<tr>
+<td style="display: block; margin: 0; padding: 0; text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+@{if IsEmpty(Recipient.OnlyStandardFirstName)}У
+вас @{else} ${Recipient.OnlyStandardFirstName },
+у вас @{end if} пока нет
+<a href="https://www.divan.ru/cabinet/" target="_blank" style="color: #ffffff; text-decoration: underline;">
+бонусов.
+</a>
+</td>
+</tr>
+@{else}
+<tr>
+<td style="display: block; margin: 0; padding: 0; text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+У вас пока нет бонусов.
+<a href="https://www.divan.ru/site/divan-club" target="_blank" style="color: #ffffff; text-decoration: underline;">
+Зарегистрируйтесь.
+</a>
+</td>
+</tr>
+@{end if}
+<tr>
+<td style="padding: 0 0 10px"></td>
+</tr>
+</table>
+</td>
+<td style="width: 20px"></td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- -Current balance -->
+
+
+<!-- +2 block -->
+<tr>
+<td style="padding: 0 20px;">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 560px;">
+<tr><td style="height: 40px;"></td></tr>
+<tr>
+<td style="width: 520px; font-size: 40px !important; line-height: 52px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Дизайнерские приемы
+</td>
+</tr>
+<tr><td style="height: 50px;"></td></tr>
+<tr>
+<td style="width: 560px;">
+<a href="https://www.divan.ru/idei-i-trendy/sovremennaa-klassika-na-38-kvm-fotogenicnaa-kvartira-blogera" 
+target="_blank" style="display: block; text-decoration: none;">
+<img src="./img/content/image1.jpg" style="display: block; width: 560px;" alt="">
+</a>
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td style="width: 520px;font-size: 22px !important; font-weight: 600; line-height: 33px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Современная классика на 38 кв.м
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td style="width: 520px;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Хозяйка квартиры активно ведет соцсети и ей важна фотогеничность интерьера. Дизайнер Алена Матисова 
+помогла осовременить классические элементы и создать стильное пространство, которое отлично смотрится в кадре.
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td style="width: 520px; ">
+<a href="https://www.divan.ru/idei-i-trendy/sovremennaa-klassika-na-38-kvm-fotogenicnaa-kvartira-blogera" 
+target="_blank" style="display: inline-block;border-bottom: 1px solid #404040; text-decoration: none;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Рассмотреть проект в деталях
+</a>
+</td>                
+</tr>
+<tr><td style="height: 60px;"></td></tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 560px;">
+<tr>
+<td style="vertical-align:top">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 265px;">
+<tr>
+<td>
+<a href="https://www.divan.ru/idei-i-trendy/71-kvm-v-reutove-dvuska-bez-beloj-mebeli" 
+target="_blank" style="display: block; text-decoration: none;">
+<img src="./img/content/image2.jpg" style="display: block; width: 265px;" alt="">
+</a>
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td style="font-size: 18px !important; line-height: 27px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+71 кв.м в Реутове: квартира с&nbsp;ZOOM-перегородкой
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td>
+<a href="https://www.divan.ru/idei-i-trendy/71-kvm-v-reutove-dvuska-bez-beloj-mebeli" 
+target="_blank" style="display: inline-block; border-bottom: 1px solid #404040; text-decoration: none;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Читать статью
+</a>
+</td>
+</tr>
+</table>
+</td>
+<td style="width: 30px;"></td>
+<td style="vertical-align:top">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 265px;">
+<tr>
+<td>
+<a href="https://www.divan.ru/idei-i-trendy/ofisnoe-prostranstvo-40-kvm-v-cvetovoj-palitre-kompanii-s-kollekciej-sovremennogo-iskusstva" 
+target="_blank" style="display: block; text-decoration: none;">
+<img src="./img/content/image3.jpg" style="display: block; width: 265px;" alt="">
+</a>
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td style="font-size: 18px !important; line-height: 27px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Офис 40 кв.м с коллекцией современного искусства
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td>
+<a href="https://www.divan.ru/idei-i-trendy/ofisnoe-prostranstvo-40-kvm-v-cvetovoj-palitre-kompanii-s-kollekciej-sovremennogo-iskusstva" 
+target="_blank" style="display: inline-block; border-bottom: 1px solid #404040; text-decoration: none;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Читать статью
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td style="height: 90px;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- -2 block -->
+
+<tr><td style="height: 20px; background-color: #D1CDCC;"></td></tr>
+
+<!-- +1 block -->
+<tr>
+<td style="padding: 0 20px;">
+<table border="0" cellpadding="0" cellspacing="0" style=" width: 560px;">
+<tr><td style="height: 50px;"></td></tr>
+<tr>
+<td style="width: 520px; font-size: 40px !important; line-height: 52px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Вы искали? Мы нашли!
+</td>
+</tr>
+<tr><td style="height: 50px;"></td></tr>
+<tr>
+<td style="width: 560px;">
+<a href="https://www.divan.ru/idei-i-trendy/mebel-kak-v-ikea-gde-kupit-cem-dopolnit-kak-podobrat-zamenu" 
+target="_blank" style="display: block; text-decoration: none;">
+<img src="./img/content/image4.jpg" style="display: block; width: 560px;" alt="">
+</a>
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td style="width: 520px;font-size: 22px !important; font-weight: 600; line-height: 33px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Мебель как в ИКЕА: где купить, чем дополнить, как&nbsp;подобрать замену
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td style="width: 520px;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Ушедший шведский бренд мы ценили за эстетику, качество, доступные цены, атмосферные каталоги и&nbsp;вдохновляющее 
+пространство магазинов. Производить похожие товары в&nbsp;России научились, а как быть с вдохновением?
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td style="width: 520px; ">
+<a href="https://www.divan.ru/idei-i-trendy/mebel-kak-v-ikea-gde-kupit-cem-dopolnit-kak-podobrat-zamenu" 
+target="_blank" style="display: inline-block;border-bottom: 1px solid #404040; text-decoration: none;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Читать далее
+</a>
+</td>                
+</tr>
+<tr><td style="height: 60px;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- -1 block -->
+
+<tr><td style="height: 20px; background-color: #D1CDCC;"></td></tr>
+
+<!-- +3 block -->
+<tr>
+<td style="padding: 0 20px;">
+<table border="0" cellpadding="0" cellspacing="0" style=" width: 560px;">
+<tr><td style="height: 50px;"></td></tr>
+<tr>
+<td style="width: 520px; font-size: 40px !important; line-height: 52px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Сезон открыт
+</td>
+</tr>
+<tr><td style="height: 50px;"></td></tr>
+<tr>
+<td style="width: 560px;">
+<a href="https://www.divan.ru/idei-i-trendy/sezon-otkryt-4-idei-dla-zony-otdyha-na-dace" 
+target="_blank" style="display: block; text-decoration: none;">
+<img src="./img/content/image5.jpg" style="display: block; width: 560px;" alt="">
+</a>
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td style="width: 520px;font-size: 22px !important; font-weight: 600; line-height: 33px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+4 идеи для зоны отдыха на даче
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td style="width: 520px;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Когда на даче ждут только грядки, лишний раз выбираться за город не хочется. А вот барбекю на летней террасе и&nbsp;уютные 
+посиделки в саду могут стать любимым летним досугом. Рассказываем, как организовать удобную зону отдыха и&nbsp;наслаждаться жизнью.
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td style="width: 520px; ">
+<a href="https://www.divan.ru/idei-i-trendy/sezon-otkryt-4-idei-dla-zony-otdyha-na-dace" 
+target="_blank" style="display: inline-block;border-bottom: 1px solid #404040; text-decoration: none;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Смотреть готовые решения
+</a>
+</td>                
+</tr>
+<tr><td style="height: 60px;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- -3 block -->
+
+<tr><td style="height: 20px; background-color: #D1CDCC;"></td></tr>
+
+<!-- +4 block -->
+<tr>
+<td style="padding: 0 20px;">
+<table border="0" cellpadding="0" cellspacing="0" style=" width: 560px;">
+<tr><td style="height: 60px;"></td></tr>
+<tr>
+<td style="width: 560px;">
+<a href="https://www.youtube.com/watch?v=U80UyBCzzcQ" 
+target="_blank" style="display: block; text-decoration: none;">
+<img src="./img/content/image6.jpg" style="display: block; width: 560px;" alt="">
+</a>
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td style="width: 520px;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Маленькая площадь, ограниченный бюджет, посредственный ремонт от застройщика — в этом проекте архитектор-дизайнер 
+Варвара Шалито столкнулась со всевозможными сложностями. Как ей удалось наполнить пространство цветом и жизнью, 
+визуально расширить его и оставить много свободного места — смотрите в новом видео
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td style="width: 520px; ">
+<a href="https://www.youtube.com/watch?v=U80UyBCzzcQ" 
+target="_blank" style="display: inline-block;border-bottom: 1px solid #404040; text-decoration: none;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Проект на YouTube
+</a>
+</td>                
+</tr>
+<tr><td style="height: 50px;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- -4 block -->
+
+<!-- +Feedback -->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="margin: 0; padding: 0; width: 600px; background-color: #F5F3F1;">
+<tbody>
+<tr><td style="height: 60px;"></td></tr>
+<tr>
+<td style="width: 520px; padding: 0 20px; text-align: center; font-size: 24px !important; line-height: 36px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Присылайте нам свои квартиры
+</td>
+</tr>
+<tr><td style="height: 25px;"></td></tr>               
+<tr>
+<td style="padding: 0 20px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td style="width: 40px; padding-right: 15px;">
+<img src="./img/content/icon1.png" style="width: 40px; height: 40px;" alt="">
+</td>
+<td style="width: 465px; font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Пишите в чат-бот 
+<a href="https://t.me/divan_room_tour_bot" target="_blank" style="color: #157EE9; margin: 0; padding: 0; text-decoration: none;">
+@divan_room_tour_bot
+</a>
+в Телеграме
+</td>
+</tr>
+<tr><td style="height: 15px;"></td></tr>
+<tr>
+<td style="width: 40px; padding-right: 15px;">
+<img src="./img/content/icon2.png" style="width: 40px; height: 40px;" alt="">
+</td>
+<td style="width: 465px; font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Лучшие интерьеры попадут на страницы <br/>
+<a href="https://www.divan.ru/idei-i-trendy/category/rum-tur-po-domu" target="_blank" style="color: #157EE9; margin: 0; padding: 0; text-decoration: none;">
+онлайн-журнала
+</a>
+</td>
+</tr>
+<tr><td style="height: 15px;"></td></tr>
+<tr>
+<td style="width: 40px; padding-right: 15px;">
+<img src="./img/content/icon3.png" style="width: 40px; height: 40px;" alt="">
+</td>
+<td style="width: 465px; font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Видео репортажи снимем для нашего <br/>
+<a href="https://www.youtube.com/@divanru" target="_blank" style="color: #157EE9; margin: 0; padding: 0; text-decoration: none;">
+канала на YouTube
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr><td style="width: 560px; height: 40px;"></td></tr>
+<tr align="center">
+<td style="width: 310px; padding: 0 20px; display: block;">
+<table border="0" cellpadding="0" cellspacing="0" style="margin: 0; padding: 0; width: 310px;">
+<tbody>
+<tr>
+<td style="width: 310px; border-color: #C4C4C4; border-style: solid; border-width: 1px; border-radius: 4px; text-align: center;">
+<a href="https://t.me/divan_room_tour_bot" target="_blank" style="display: block; width: 310px; margin: 0; padding: 0; text-decoration: none; font-size: 18px !important; line-height: 55px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Написать
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr><td style="width: 560px; height: 60px;"></td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- -Feedback -->
+
+<tr><td style="height: 20px; background-color: #D1CDCC;"></td></tr>
+
+<!-- +Second-banner -->
+<tr>
+<td style="width: 560px;">
+<a href="https://www.divan.ru/category/promo-bestsellers" 
+target="_blank" style="display: block; text-decoration: none;">
+<img src="./img/content/banner.jpg" style="display: block; width: 600px;" alt="">
+</a>
+</td>
+</tr>
+<!-- -Second-banner -->
+
+<tr><td style="height: 20px; background-color: #D1CDCC;"></td></tr>
+
+<!-- +Footer -->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="padding: 0 20px">
+<tr><td style="height: 30px"></td></tr>
+
+<tr>
+<td style="vertical-align:top">
+<table>
+<tr>
+<td align="left" style="width: 280px">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="padding-right: 8px;">
+<a href="https://t.me/officialdivanru" title="telegram" target="_blank" style="width: 40px; height: 40px; text-decoration: none;">
+<img src="img/footer/telegram.png" style="width: 40px;" alt="telegram" />
+</a>
+</td>
+<td style="padding-right: 8px;">
+<a href="https://www.youtube.com/channel/UCHmpEu-ysoKTMZvY9TMHj4g?sub_confirmation=1" title="youtube" target="_blank" style="width: 40px; height: 40px; text-decoration: none;">
+<img src="img/footer/youtube.png" style="width: 40px;" alt="youtube" />
+</a>
+</td>
+<td style="padding-right: 8px;">
+<a href="http://vk.com/ilovedivan" title="vk" target="_blank" style="width: 40px; height: 40px; text-decoration: none;">
+<img src="img/footer/vk.png" style="width: 40px;" alt="vk" />
+</a>
+</td>
+<td style="padding-right: 8px;">
+<a href="https://dzen.ru/divanru" title="dzen" target="_blank" style="width: 40px; height: 40px; text-decoration: none;">
+<img src="img/footer/dzen.png" style="width: 40px;" alt="dzen" />
+</a>
+</td>
+<td>
+<a href="https://pin.it/2esrMUt" title="pinterest" target="_blank" style="width: 40px; height: 40px; margin: 0; text-decoration: none;">
+<img src="img/footer/pinterest.png" style="width: 40px;" alt="pinterest" />
+</a>
+</td>                      
+</tr>
+</table>
+</td>
+<td align="right" style="width: 280px">
+<a href="https://market.yandex.ru/shop--divan-ru/309964/reviews" style="text-decoration: none; color: none;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 14px ; line-height: 21px; font-weight: 700; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">Читайте отзывы</td>
+</tr>
+<tr>
+<td style="height: 3px;"></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 14px ; line-height: 21px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">Яндекс.Маркет</td>
+<td style="width: 10px;"></td>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<img src="img/footer/star_full.png" style="width: 14px; padding-left: 1px;" alt="star">
+</td>
+<td>
+<img src="img/footer/star_full.png" style="width: 14px; padding-left: 1px;" alt="star">
+</td>
+<td>
+<img src="img/footer/star_full.png" style="width: 14px; padding-left: 1px;" alt="star">
+</td>
+<td>
+<img src="img/footer/star_full.png" style="width: 14px; padding-left: 1px;" alt="star">
+</td>
+<td>
+<img src="img/footer/star_half.png" style="width: 14px;" alt="star">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td style="height: 30px"></td></tr>
+<tr>
+<td>
+<a href="https://www.divan.ru/site/delivery" title="divan.ru/site/delivery" target="_blank" style="display: block;  height: 77px;  text-decoration: none;">
+<img src="img/footer/delivery_with_stop.gif" style="display: block;  height: 77px; border: 0; pointer-events: none;" alt="">
+</a>
+</td>
+</tr>
+<tr>
+<td style="width: 520px; display: block; margin: 0 20px; border-bottom: 1px solid #bfbfbf;"></td>
+</tr>
+<tr><td style="height: 20px"></td></tr>
+<tr>
+<td>
+<table align='center'>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 100%">
+<tr>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/akcii-skidki" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Акции
+</a>
+</td>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/category/divany-i-kresla" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Диваны
+</a>
+</td>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/category/stoly-i-stulya" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Столы и стулья
+</a>
+</td>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/category/kovry-i-tekstil" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Ковры и текстиль
+</a>
+</td>
+<td style="padding-right: 0px; text-align: center;">
+<a href="https://www.divan.ru/category/svet" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Освещение
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td style="height: 30px"></td></tr>
+<tr>
+<td align="center" style="width: 520px;  text-align: center; font-family: 'Arial', sans-serif; font-size: 14px ; -webkit-text-size-adjust: none; line-height: 21px; color: #989898;">
+Вы получили это письмо, потому что подписались на рассылку на сайте divan.ru. Если вы не хотите больше получать наши письма, 
+<a href="${Message.UnsubscribeLink}" target="_blank" style="width: 520px; color: #157EE9; text-decoration: underline;">
+отпишитесь.
+</a>
+</td>
+</tr>
+<tr><td style="height: 15px"></td></tr>
+<tr>
+<td align="center" style="width: 520px;  text-align: center;">
+<a href="${Message.AccessibilityLink}" target="_blank" style="display: inline-block; height: 29px; border-bottom: 1px solid #989898; font-family: 'Arial', sans-serif; font-size: 18px ; -webkit-text-size-adjust: none; line-height: 150%; padding: 0; color: #989898 ; text-decoration: none; ">
+Веб-версия
+</a>
+</td>
+</tr>
+<tr><td style="height: 30px"></td></tr>
+</table>
+</td>
+</tr>
+<!-- -Footer -->
+
+<tr><td style="height: 20px; background-color: #D1CDCC;"></td></tr>
+
+</table>
+</td>
+</tr>
+<!-- -Content -->
+</tbody>
+</table>
+</body>
+<div style="display:none; white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
+</html>
