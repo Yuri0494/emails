@@ -1,0 +1,609 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Выбирайте экологичный дизайн</title>
+</head>
+<body style="margin: 0; background-color: #D1CDCC;">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 640px; margin: 0 auto; padding: 20px; background-color: #D1CDCC;">
+<tbody>
+
+<!-- +Preheader -->
+<tr>
+<td style="display: none;">
+&nbsp;🌍 С заботой о планете&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;
+</td>
+</tr>
+<!-- -Preheader -->
+
+<!-- +Content -->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="background-color: #fafafa;">
+
+<!-- +Header-->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="background: url(./img/header/background.jpg);">
+<tbody>
+<tr>
+<td>
+<a href="https://divan.ru/" title="divan.ru" target="_blank" style="text-decoration: none;">
+<img src="img/header/logo.png" style="display: block; width: 300px;" alt="divan.ru" />
+</a>
+</td>
+<td>
+<a href="https://www.divan.ru/catalog/room" title="divan.ru" target="_blank" style="text-decoration: none;">
+<img src="img/header/room.png" style="display: block; width: 300px;" alt="Комнаты" />
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- -Header-->
+
+<!-- +Current balance -->
+<tr style="background-color: #333333;">
+<td align="center" style="background-color: #333333;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;  margin: 0; padding: 0; background-color: #333333;">
+<tr>
+<td style="width: 20px"></td>
+<td>
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 100%; margin: 0; padding: 0;">
+<tr>
+<td style="padding: 0 0 10px"></td>
+</tr>
+@{if Recipient.IsInSegment("UchastnikyPL") and
+Recipient.GetBonusPointsAccount("BalanceMain").Total
+> 0}
+<tr>
+<td
+style="display: block; margin: 0; padding: 0; text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+@{if
+IsEmpty(Recipient.OnlyStandardFirstName)}Ваш
+@{else} ${Recipient.OnlyStandardFirstName }, ваш
+@{end if} баланс
+<a href="https://divan.ru/cabinet/" target="_blank" style="color: #ffffff; text-decoration: underline;">
+${Recipient.GetBonusPointsAccount("BalanceMain").Available}
+/
+${Recipient.GetBonusPointsAccount("BalanceMain").Total}
+бонусов
+</a>
+</td>
+</tr>
+@{else if Recipient.IsInSegment("UchastnikyPL") and
+Recipient.GetBonusPointsAccount("BalanceMain").Total
+= 0}
+<tr>
+<td style="display: block; margin: 0; padding: 0; text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+@{if IsEmpty(Recipient.OnlyStandardFirstName)}У
+вас @{else} ${Recipient.OnlyStandardFirstName },
+у вас @{end if} пока нет
+<a href="https://www.divan.ru/cabinet/" target="_blank" style="color: #ffffff; text-decoration: underline;">
+бонусов.
+</a>
+</td>
+</tr>
+@{else}
+<tr>
+<td style="display: block; margin: 0; padding: 0; text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+У вас пока нет бонусов.
+<a href="https://www.divan.ru/site/divan-club" target="_blank" style="color: #ffffff; text-decoration: underline;">
+Зарегистрируйтесь.
+</a>
+</td>
+</tr>
+@{end if}
+<tr>
+<td style="padding: 0 0 10px"></td>
+</tr>
+</table>
+</td>
+<td style="width: 20px"></td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- -Current balance -->
+
+<!-- +Main Banner -->
+<tr>
+<td>
+<a href="https://www.divan.ru/product/divan-ridan-infinity-blue" target="_blank" style="text-decoration: none;">
+<img src="./img/content/main-banner.jpg" style="display: block; width: 600px;" alt="">
+</a>                  
+</td>
+</tr>
+<!-- -Main Banner -->
+<tr><td style="height: 50px;"></td></tr>
+
+<!-- +Main text -->
+<tr>
+  <td style="font-size: 24px ; line-height: 36px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040; padding: 0 20px;">
+    Всемирный день окружающей среды — повод выразить свое заботливое отношение к природе. 
+  </td>
+</tr>
+<!-- -Main text -->
+
+<tr><td style="height: 30px;"></td></tr>
+
+<!-- +OL -->
+<tr>
+  <td style="padding: 0 20px;">
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 560px;">
+      <tr>
+        <td style="width: 560px; text-align:left; font-size: 22px; font-weight: 700; line-height: 33px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+          Рассказываем, как наша команда Divan.ru идет в сторону осознанного потребления:
+        </td>
+      </tr>
+
+      <tr><td style="height: 30px;"></td></tr>
+
+      <tr>
+        <td>
+          <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td style="vertical-align: top; text-align:left; font-size: 18px; font-weight: 700; line-height: 27px; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+                1.
+              </td>
+              <td style="padding-left: 20px; text-align:left; font-size: 18px ; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+                В центральном офисе в г. Владимир у нас есть специальные контейнеры для сбора 
+                пластиковых крышечек и батареек, поддерживается сбор раздельного мусора.  
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr><td style="height: 30px;"></td></tr>
+
+      <tr>
+        <td>
+          <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td style="vertical-align: top; text-align:left; font-size: 18px; font-weight: 700; line-height: 27px; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+                2.
+              </td>
+              <td style="padding-left: 20px; text-align:left; font-size: 18px ; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+                Наша команда собрала для правильной утилизации больше 100 кг батареек и свыше 50 кг «добрых крышечек».
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr><td style="height: 30px;"></td></tr>
+
+      <tr>
+        <td>
+          <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td style="vertical-align: top; text-align:left; font-size: 18px; font-weight: 700; line-height: 27px; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+                3.
+              </td>
+              <td style="padding-left: 20px; text-align:left; font-size: 18px ; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+                Эколого-благотворительный проект reTHINK – reCYCLE нацелен на покупку инвалидных 
+                колясок и реабилитационной техники для детей с ОВЗ из приемных семей.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr><td style="height: 30px;"></td></tr>
+
+      <tr>
+        <td>
+          <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td style="vertical-align: top; text-align:left; font-size: 18px; font-weight: 700; line-height: 27px; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+                4.
+              </td>
+              <td style="padding-left: 20px; text-align:left; font-size: 18px ; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+                Регулярно проводим уборку городских общественных пространств всей командой.
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr><td style="height: 30px;"></td></tr>
+
+      <tr>
+        <td>
+          <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td style="vertical-align: top; text-align:left; font-size: 18px; font-weight: 700; line-height: 27px; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+                5.
+              </td>
+              <td style="padding-left: 20px; text-align:left; font-size: 18px ; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+                Производим мебель и аксессуары для дома из экологичных переработанных материалов, чтобы вы могли создавать комфорт и уют у себя дома с заботой о природе.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      
+    </table>
+  </td>
+</tr>
+<!-- -OL -->
+
+<tr><td style="height: 80px;"></td></tr>
+
+<!-- +Card-1 -->
+<tr>
+  <td style="padding: 0 20px;">
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 550px;">
+
+      <tr>
+        <td>
+          <a href="https://www.divan.ru/product/divan-ridan-infinity-blue" target="_blank">
+            <img src="./img/content/image1.png" style="width: 550px;">
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="font-size: 24px ; line-height: 36px; font-weight: 700; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+          Диван Ридан
+        </td>
+      </tr>
+
+      <tr><td style="height: 20px;"></td></tr>
+
+      <tr>
+        <td style="width: 420px;font-size: 18px ; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+          Изящный диван с обнимающими формами в «умной» экообивке Infinity. Высокотехнологичный шенилл 
+          изготовлен из пластика — мягкий, бархатистый, в разнообразной палитре. Забота об окружающем 
+          мире еще никогда не была такой комфортной!
+        </td>
+      </tr>
+
+      <tr><td style="height: 20px;"></td></tr>
+
+      <tr>
+        <td>
+          <a href="https://www.divan.ru/product/divan-ridan-infinity-blue" 
+            target="_blank" style="display: inline-block;border-bottom: 1px solid #404040; text-decoration: none;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+            Подробнее
+          </a>
+        </td>
+      </tr>
+
+      <tr><td style="height: 20px;"></td></tr>
+
+    </table>
+  </td>
+</tr>
+<!-- -Card-1 -->
+
+<tr><td style="height: 60px;"></td></tr>
+
+<!-- +Card-2 -->
+<tr>
+  <td align="right" style="padding: 0 20px;">
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 550px;">
+
+      <tr>
+        <td>
+          <a href="https://www.divan.ru/product/pled-tut-ryadom-teplo-sine-bejevyj-140x200" target="_blank">
+            <img src="./img/content/image2.png" style="width: 550px;">
+          </a>
+        </td>
+      </tr>
+
+    <tr>
+      <td style="padding-left: 100px; font-size: 24px ; line-height: 36px; font-weight: 700; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+        Плед Тут Рядом Тепло
+      </td>
+    </tr>
+
+    <tr><td style="height: 20px;"></td></tr>
+
+    <tr>
+      <td style="padding-left: 100px; width: 420px;font-size: 18px ; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+        Плед с авторским принтом — создан совместно с фондом «Антон тут рядом». Гипоаллергенный, 
+        эстетичный и приятный на ощупь материал помогает планете (текстиль создан из переработанных пластиковых бутылок).
+        <br/>
+        <br/>
+        Вся прибыль от продажи коллекции «Тут рядом» идет на благотворительность.
+      </td>
+    </tr>
+
+    <tr><td style="height: 20px;"></td></tr>
+
+    <tr>
+      <td style="padding-left: 100px;">
+        <a href="https://www.divan.ru/product/pled-tut-ryadom-teplo-sine-bejevyj-140x200" 
+          target="_blank" style="display: inline-block;border-bottom: 1px solid #404040; text-decoration: none;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+          Подробнее
+        </a>
+      </td>
+    </tr>
+
+    <tr><td style="height: 20px;"></td></tr>
+
+    </table>
+  </td>
+</tr>
+<!-- -Card-2 -->
+
+<tr><td style="height: 60px;"></td></tr>
+
+<!-- +Card-1 -->
+<tr>
+  <td style="padding: 0 20px;">
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 550px;">
+
+      <tr>
+        <td>
+          <a href="https://www.divan.ru/product/puf-tut-ryadom-dom-zelenyj" target="_blank">
+            <img src="./img/content/image3.png" style="width: 550px;">
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="font-size: 24px ; line-height: 36px; font-weight: 700; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+          Пуф Тут Рядом Дом
+        </td>
+      </tr>
+
+      <tr><td style="height: 20px;"></td></tr>
+
+      <tr>
+        <td style="width: 420px;font-size: 18px ; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+          Пуф модной округлой формы в экологичной обивке Winter. Фактура с пушистыми ворсинками невероятно нежная, тактильно приятная.
+          <br/>
+          <br/>
+          Вся прибыль от продажи коллекции «Тут рядом» идет на благотворительность.
+        </td>
+      </tr>
+
+      <tr><td style="height: 20px;"></td></tr>
+
+      <tr>
+        <td>
+          <a href="https://www.divan.ru/product/puf-tut-ryadom-dom-zelenyj" 
+            target="_blank" style="display: inline-block;border-bottom: 1px solid #404040; text-decoration: none;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+            Подробнее
+          </a>
+        </td>
+      </tr>
+
+      <tr><td style="height: 20px;"></td></tr>
+
+    </table>
+  </td>
+</tr>
+<!-- -Card-1 -->
+
+<tr><td style="height: 60px;"></td></tr>
+
+<!-- +Card-2 -->
+<tr>
+  <td align="right" style="padding: 0 20px;">
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 550px;">
+
+      <tr>
+        <td>
+          <a href="https://www.divan.ru/product/pled-tut-ryadom-horosho-jeltyj-140x200" target="_blank">
+            <img src="./img/content/image4.png" style="width: 550px;">
+          </a>
+        </td>
+      </tr>
+
+    <tr>
+      <td style="padding-left: 100px; font-size: 24px ; line-height: 36px; font-weight: 700; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+        Плед Тут Рядом Хорошо
+      </td>
+    </tr>
+
+    <tr><td style="height: 20px;"></td></tr>
+
+    <tr>
+      <td style="padding-left: 100px; width: 420px;font-size: 18px ; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+        Уютный плед с бахромой — нежный и обнимательный, как мурчащий кот. Изготовлен из 100% переработанного полиэстера — с заботой о планете и вашем комфорте. 
+        <br/>
+        <br/>
+        Вся прибыль от продажи коллекции «Тут рядом» идет на благотворительность.
+      </td>
+    </tr>
+
+    <tr><td style="height: 20px;"></td></tr>
+
+    <tr>
+      <td style="padding-left: 100px;">
+        <a href="https://www.divan.ru/product/pled-tut-ryadom-horosho-jeltyj-140x200" 
+          target="_blank" style="display: inline-block;border-bottom: 1px solid #404040; text-decoration: none;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+          Подробнее
+        </a>
+      </td>
+    </tr>
+
+    </table>
+  </td>
+</tr>
+<!-- -Card-2 -->
+
+<tr><td style="height: 80px;"></td></tr>
+
+<tr><td style="height: 20px; background-color: #D1CDCC;"></td></tr>
+
+<!-- +Footer -->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="padding: 0 20px">
+<tr><td style="height: 30px"></td></tr>
+
+<tr>
+<td style="vertical-align:top">
+<table>
+<tr>
+<td align="left" style="width: 280px">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="padding-right: 8px;">
+<a href="https://t.me/officialdivanru" title="telegram" target="_blank" style="width: 40px; height: 40px; text-decoration: none;">
+<img src="img/footer/telegram.png" style="width: 40px;" alt="telegram" />
+</a>
+</td>
+<td style="padding-right: 8px;">
+<a href="https://www.youtube.com/channel/UCHmpEu-ysoKTMZvY9TMHj4g?sub_confirmation=1" title="youtube" target="_blank" style="width: 40px; height: 40px; text-decoration: none;">
+<img src="img/footer/youtube.png" style="width: 40px;" alt="youtube" />
+</a>
+</td>
+<td style="padding-right: 8px;">
+<a href="http://vk.com/ilovedivan" title="vk" target="_blank" style="width: 40px; height: 40px; text-decoration: none;">
+<img src="img/footer/vk.png" style="width: 40px;" alt="vk" />
+</a>
+</td>
+<td style="padding-right: 8px;">
+<a href="https://dzen.ru/divanru" title="dzen" target="_blank" style="width: 40px; height: 40px; text-decoration: none;">
+<img src="img/footer/dzen.png" style="width: 40px;" alt="dzen" />
+</a>
+</td>
+<td>
+<a href="https://pin.it/2esrMUt" title="pinterest" target="_blank" style="width: 40px; height: 40px; margin: 0; text-decoration: none;">
+<img src="img/footer/pinterest.png" style="width: 40px;" alt="pinterest" />
+</a>
+</td>                      
+</tr>
+</table>
+</td>
+<td align="right" style="width: 280px">
+<a href="https://market.yandex.ru/shop--divan-ru/309964/reviews" style="text-decoration: none; color: none;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 14px ; line-height: 21px; font-weight: 700; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">Читайте отзывы</td>
+</tr>
+<tr>
+<td style="height: 3px;"></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 14px ; line-height: 21px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">Яндекс.Маркет</td>
+<td style="width: 10px;"></td>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<img src="img/footer/star_full.png" style="width: 14px; padding-left: 1px;" alt="star">
+</td>
+<td>
+<img src="img/footer/star_full.png" style="width: 14px; padding-left: 1px;" alt="star">
+</td>
+<td>
+<img src="img/footer/star_full.png" style="width: 14px; padding-left: 1px;" alt="star">
+</td>
+<td>
+<img src="img/footer/star_full.png" style="width: 14px; padding-left: 1px;" alt="star">
+</td>
+<td>
+<img src="img/footer/star_half.png" style="width: 14px;" alt="star">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td style="height: 30px"></td></tr>
+<tr>
+<td>
+<a href="https://www.divan.ru/site/delivery" title="divan.ru/site/delivery" target="_blank" style="display: block;  height: 77px;  text-decoration: none;">
+<img src="img/footer/delivery_with_stop.gif" style="display: block;  height: 77px; border: 0; pointer-events: none;" alt="">
+</a>
+</td>
+</tr>
+<tr>
+<td style="width: 520px; display: block; margin: 0 20px; border-bottom: 1px solid #bfbfbf;"></td>
+</tr>
+<tr><td style="height: 20px"></td></tr>
+<tr>
+<td>
+<table align='center'>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 100%">
+<tr>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/akcii-skidki" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Акции
+</a>
+</td>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/category/divany-i-kresla" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Диваны
+</a>
+</td>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/category/stoly-i-stulya" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Столы и стулья
+</a>
+</td>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/category/kovry-i-tekstil" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Ковры и текстиль
+</a>
+</td>
+<td style="padding-right: 0px; text-align: center;">
+<a href="https://www.divan.ru/category/svet" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Освещение
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td style="height: 30px"></td></tr>
+<tr>
+<td align="center" style="width: 520px;  text-align: center; font-family: 'Arial', sans-serif; font-size: 14px ; -webkit-text-size-adjust: none; line-height: 21px; color: #989898;">
+Вы получили это письмо, потому что подписались на рассылку на сайте divan.ru. Если вы не хотите больше получать наши письма, 
+<a href="${Message.UnsubscribeLink}" target="_blank" style="width: 520px; color: #157EE9; text-decoration: underline;">
+отпишитесь.
+</a>
+</td>
+</tr>
+<tr><td style="height: 15px"></td></tr>
+<tr>
+<td align="center" style="width: 520px;  text-align: center;">
+<a href="${Message.AccessibilityLink}" target="_blank" style="display: inline-block; height: 29px; border-bottom: 1px solid #989898; font-family: 'Arial', sans-serif; font-size: 18px ; -webkit-text-size-adjust: none; line-height: 150%; padding: 0; color: #989898 ; text-decoration: none; ">
+Веб-версия
+</a>
+</td>
+</tr>
+<tr><td style="height: 30px"></td></tr>
+</table>
+</td>
+</tr>
+<!-- -Footer -->
+
+<tr><td style="height: 20px; background-color: #D1CDCC;"></td></tr>
+
+</table>
+</td>
+</tr>
+<!-- -Content -->
+</tbody>
+</table>
+</body>
+<div style="display:none; white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
+</html>

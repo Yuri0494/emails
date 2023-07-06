@@ -1,0 +1,774 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Товары для сна</title>
+</head>
+<body style="margin: 0; background-color: #D1CDCC;">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 600px; margin: 0 auto; padding: 20px; background-color: #D1CDCC;">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="background-color: #FAFAFA;">
+<!-- +Preheader -->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="background-color: white;"> 
+<tr>
+<td style="display: none;">
+&nbsp;🙈 и не пожалеть об этом&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- -Preheader -->
+
+<!-- +Header-->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="background: url(./img/header/background.jpg); width: 600px;">
+<tbody>
+<tr>
+<td>
+<a href="https://divan.ru/" title="divan.ru" target="_blank" style="text-decoration: none;">
+<img src="img/header/logo.png" style="display: block; width: 300px;" alt="divan.ru" />
+</a>
+</td>
+<td>
+<a href="https://www.divan.ru/catalog/room" title="divan.ru" target="_blank" style="text-decoration: none;">
+<img src="img/header/button.png" style="display: block; width: 300px;" alt="Идеи и тренды" />
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- -Header-->
+
+<!-- +Current balance -->
+<tr style="background-color: #333333;">
+<td align="center" style="background-color: #333333; width: 600px;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;   background-color: #333333;">
+<tr>
+<td style="width: 20px"></td>
+<td>
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 100%; ">
+<tr>
+<td style="padding: 0 0 10px"></td>
+</tr>
+@{if Recipient.IsInSegment("UchastnikyPL") and
+Recipient.GetBonusPointsAccount("BalanceMain").Total
+> 0}
+<tr>
+<td
+style="display: block;  text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+@{if
+IsEmpty(Recipient.OnlyStandardFirstName)}Ваш
+@{else} ${Recipient.OnlyStandardFirstName }, ваш
+@{end if} баланс
+<a href="https://divan.ru/cabinet/" target="_blank" style="color: #ffffff; text-decoration: underline;">
+${Recipient.GetBonusPointsAccount("BalanceMain").Available}
+/
+${Recipient.GetBonusPointsAccount("BalanceMain").Total}
+бонусов
+</a>
+</td>
+</tr>
+@{else if Recipient.IsInSegment("UchastnikyPL") and
+Recipient.GetBonusPointsAccount("BalanceMain").Total
+= 0}
+<tr>
+<td style="display: block;  text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+@{if IsEmpty(Recipient.OnlyStandardFirstName)}У
+вас @{else} ${Recipient.OnlyStandardFirstName },
+у вас @{end if} пока нет
+<a href="https://www.divan.ru/cabinet/" target="_blank" style="color: #ffffff; text-decoration: underline;">
+бонусов.
+</a>
+</td>
+</tr>
+@{else}
+<tr>
+<td style="display: block;  text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+У вас пока нет бонусов.
+<a href="https://www.divan.ru/site/divan-club" target="_blank" style="color: #ffffff; text-decoration: underline;">
+Зарегистрируйтесь.
+</a>
+</td>
+</tr>
+@{end if}
+<tr>
+<td style="padding: 0 0 10px"></td>
+</tr>
+</table>
+</td>
+<td style="width: 20px"></td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- -Current balance -->
+
+<!-- +Main Banner -->
+<tr>
+<td style="width: 600px">
+<a href="https://www.divan.ru/idei-i-trendy/52-kvm-arkij-miks-skandi-i-retro-v-dvuhkomnatnoj-kvartire" target="_blank" style="text-decoration: none;">
+<img src="./img/content/main-banner.png" style="display: block; width: 600px;" alt="">
+</a>                  
+</td>
+</tr>
+<!-- -Main Banner -->
+
+<!-- +Content -->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 600px; padding: 0; margin: 0;">
+
+
+<tr><td style="height: 50px;"></td></tr>
+
+<tr>
+  <td style="width: 520px; font-size: 40px !important; line-height: 52px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040; padding: 0 20px;">
+    Учимся у профи
+  </td>
+</tr>
+
+<tr><td style="height: 40px;"></td></tr>
+
+<tr>
+<td style="font-size: 22px ; line-height: 36px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040; padding: 0 20px;">
+  Дизайнер Мила Генч выбрала для этой гостиной смелые сочные цвета. При этом интерьер не кажется визуально перегруженным. Какие приемы использованы и почему это сработало?
+</td>
+</tr>
+
+<tr><td style="height: 40px;"></td></tr>
+
+<tr>
+  <td style="padding: 0 20px;">
+    <table border="0" cellpadding="0" cellspacing="0" style="background-color: #F5F3F1; padding: 0 35px;">
+      <tr><td style="height: 40px;"></td></tr>
+      <tr>
+        <td align="center"><img src="./img/content/note.png" style="width: 24px;"></td>
+      </tr>
+      <tr><td style="height: 30px;"></td></tr>
+      <tr>
+        <td style="font-size: 18px ; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+          — Обратите внимание на классические цветовые <br>пары — красный с зеленым на панно, синий с желтым в меблировке: антагонисты по цветовому кругу усиливают друг друга. При этом яркая стена находится за спиной сидящего на диване, не будоражит. Потолок и оставшиеся стены также сделали нейтральными. Обратите внимание: оттенки там и здесь повторяются: синее кресло в поддержку акцентной стены, плед на диване, керамика и лампа — в поддержку панно. Благодаря общей палитре обстановка воспринимается стильной и целостной. 
+        </td>
+      </tr>
+      <tr><td style="height: 30px;"></td></tr>
+      <tr>
+        <td><img src="./img/content/note_divider.png" style="width: 490px;"></td>
+      </tr>
+      <tr><td style="height: 30px;"></td></tr>
+      <tr>
+        <td>
+          <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><img src="./img/content/baby.png" style="width: 90px;"></td>
+              <td style="width: 30px;"></td>
+              <td>
+                <table border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="font-size: 22px !important; line-height: 24px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">Мила Генч</td>
+                  </tr>
+                  <tr><td style="height: 8px;"></td></tr>
+                  <tr>
+                    <td style="font-size: 16px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898">дизайнер, основатель <br>студии Gench Design</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr><td style="height: 30px;"></td></tr>
+    </table>
+  </td>
+</tr>
+
+<tr><td style="height: 50px;"></td></tr>
+
+<tr>
+<td align="center" style="padding: 0 20px;">
+<table border="0" cellpadding="0" cellspacing="0" style="padding: 26px 30px; background-color: #D8F0E2;">
+<tr>
+<td align="center"><img src="./img/content/sell.png" style="width: 20px;"></td>
+</tr>
+<tr><td style="height: 10px;"></td></tr>
+<tr>
+<td style="font-size: 22px ; line-height: 33px; font-weight: 500; text-align:center;-webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+  Решение от дизайнера сейчас можно приобрести со скидкой до -30%
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 30px;"></td></tr>
+
+<tr>
+  <td style="padding: 0 20px;">
+  <table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+  <!-- +Product-1 -->
+  <td>
+    <table border="0" cellpadding="0" cellspacing="0">
+    
+    <tr>
+    <td>
+    <a href="https://www.divan.ru/product/jurnalnyj-stol-berli-1" target="_blank" style="text-decoration: none;">
+    <img src="./img/content/product-1.png" style="display: block; width: 265px;" alt="">
+    </a>
+    </td>
+    </tr>
+    
+    <tr><td style="height: 15px;"></td></tr>
+    
+    <tr>
+    <td>
+    <table border="0" cellpadding="0" cellspacing="0" >
+    <tr>
+    <td>
+    <img src="./img/content/bonuses.png" style="width: 14px;" alt="">
+    </td>
+    <td style="width: 5px;"></td>
+    <td style="padding: 0; font-size: 15px ; line-height: 22px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+      +400 бонусов
+    </td>
+    </tr>
+    </table>
+    </td>
+    </tr>
+    
+    <tr><td style="height: 5px;"></td></tr>
+    
+    <tr>
+    <td style="font-size: 16px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+      Журнальный стол Берли-1
+    </td>
+    </tr>
+    
+    <tr><td style="height: 5px;"></td></tr>
+    
+    <tr>
+    <td>
+    <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+    <td style="font-size: 22px ; line-height: 32px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+      7990 ₽
+    </td>
+    <td style="width: 14px;"></td>
+    <td style="font-size: 16px ; line-height: 32px; text-decoration: line-through; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+      8990 ₽
+    </td>
+    </tr>
+    </table>
+    </td>
+    </tr>
+    
+    <tr><td style="height: 15px;"></td></tr>
+  
+    <tr>
+    <td style="text-align: center; border-width: 1px; border-radius: 4px; border-style: solid; border-color: #C4C4C4;">
+    <a href="https://www.divan.ru/product/jurnalnyj-stol-berli-1" target="_blank" style="display: block; margin: 0; text-align: center; font-weight: 600; text-decoration: none;  font-size: 16px ; line-height: 50px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+    Купить
+    </a>
+    </td>
+    </tr>
+    
+    </table>
+    </td>
+  <!-- -Product-1 -->
+  
+  <td style="width: 30px;"></td>
+  
+  <!-- +Product-2 -->
+  <td>
+  <table border="0" cellpadding="0" cellspacing="0">
+  
+  <tr>
+  <td>
+  <a href="https://www.divan.ru/product/podushka-links-barhat-gold" target="_blank" style="text-decoration: none;">
+  <img src="./img/content/product-2.png" style="display: block; width: 265px;" alt="">
+  </a>
+  </td>
+  </tr>
+  
+  <tr><td style="height: 15px;"></td></tr>
+  
+  <tr>
+  <td>
+  <table border="0" cellpadding="0" cellspacing="0" >
+  <tr>
+  <td>
+  <img src="./img/content/bonuses.png" style="width: 14px;" alt="">
+  </td>
+  <td style="width: 5px;"></td>
+  <td style="padding: 0; font-size: 15px ; line-height: 22px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+    +80 бонусов
+  </td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  
+  <tr><td style="height: 5px;"></td></tr>
+  
+  <tr>
+  <td style="font-size: 16px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+    Подушка Линкс Barhat Gold
+  </td>
+  </tr>
+  
+  <tr><td style="height: 5px;"></td></tr>
+  
+  <tr>
+  <td>
+  <table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+  <td style="font-size: 22px ; line-height: 32px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+    1590 ₽
+  </td>
+  <td style="width: 14px;"></td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  
+  <tr><td style="height: 15px;"></td></tr>
+
+  <tr>
+  <td style="text-align: center; border-width: 1px; border-radius: 4px; border-style: solid; border-color: #C4C4C4;">
+  <a href="https://www.divan.ru/product/podushka-links-barhat-gold" target="_blank" style="display: block; margin: 0; text-align: center; font-weight: 600; text-decoration: none;  font-size: 16px ; line-height: 50px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+  Купить
+  </a>
+  </td>
+  </tr>
+  
+  </table>
+  </td>
+  <!-- -Product-2 -->
+  </tr>
+  </table>
+  </td>
+  </tr>
+
+  <tr><td style="height: 40px;"></td></tr>
+
+  <tr>
+    <td style="padding: 0 20px;">
+    <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+    <!-- +Product-3 -->
+    <td>
+    <table border="0" cellpadding="0" cellspacing="0">
+    
+    <tr>
+    <td>
+    <a href="https://www.divan.ru/product/divan-slipson-happy-yellow" target="_blank" style="text-decoration: none;">
+    <img src="./img/content/product-3.png" style="display: block; width: 265px;" alt="">
+    </a>
+    </td>
+    </tr>
+    
+    <tr><td style="height: 15px;"></td></tr>
+    
+    <tr>
+    <td>
+    <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+    <td>
+    <img src="./img/content/bonuses.png" style="width: 14px;" alt="">
+    </td>
+    <td style="width: 5px;"></td>
+    <td style="font-size: 15px ; line-height: 22px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+      +2250 бонусов
+    </td>
+    </tr>
+    </table>
+    </td>
+    </tr>
+    
+    <tr><td style="height: 5px;"></td></tr>
+    
+    <tr>
+    <td style="font-size: 16px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+      Диван Слипсон Happy Yellow
+    </td>
+    </tr>
+    
+    <tr><td style="height: 5px;"></td></tr>
+    
+    <tr>
+    <td>
+    <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+    <td style="font-size: 22px ; line-height: 32px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+      44 990 ₽
+    </td>
+    <td style="width: 14px;"></td>
+    <td style="font-size: 16px ; line-height: 32px; text-decoration: line-through; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+      64 990 ₽
+    </td>
+    </tr>
+    </table>
+    </td>
+    </tr>
+    
+    <tr><td style="height: 8px;"></td></tr>
+    
+    <tr>
+      <td>
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+      <td style="width: 11px;">
+      <img src="./img/content/sber.png" style="width: 11px;" alt="">
+      </td>
+      <td style="width: 8px;"></td>
+      <td style="font-size: 13px ; line-height: 19px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #787878;">
+      Рассрочка от <span style="color: #404040;"> 7499 ₽ в мес. </span>
+      </td>
+      </tr>
+      </table>
+      </td>
+    </tr>
+
+    <tr><td style="height: 15px;"></td></tr>
+    
+    <tr>
+    <td style="text-align: center; border-width: 1px; border-radius: 4px; border-style: solid; border-color: #C4C4C4;">
+    <a href="https://www.divan.ru/product/divan-slipson-happy-yellow" target="_blank" style="display: block; text-align: center; font-weight: 600; text-decoration: none;  font-size: 16px ; line-height: 50px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+    Купить
+    </a>
+    </td>
+    </tr>
+    
+    </table>
+    </td>
+    <!-- -Product-3 -->
+    
+    <td style="width: 30px;"></td>
+    
+    <!-- +Product-4 -->
+    <td>
+    <table border="0" cellpadding="0" cellspacing="0">
+    
+    <tr>
+    <td>
+    <a href="https://www.divan.ru/product/kover-ungaro-sketch-160x230" target="_blank" style="text-decoration: none;">
+    <img src="./img/content/product-4.png" style="display: block; width: 265px;" alt="">
+    </a>
+    </td>
+    </tr>
+    
+    <tr><td style="height: 15px;"></td></tr>
+    
+    <tr>
+    <td>
+    <table border="0" cellpadding="0" cellspacing="0" >
+    <tr>
+    <td>
+    <img src="./img/content/bonuses.png" style="width: 14px;" alt="">
+    </td>
+    <td style="width: 5px;"></td>
+    <td style="padding: 0; font-size: 15px ; line-height: 22px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+      +525 бонусов
+    </td>
+    </tr>
+    </table>
+    </td>
+    </tr>
+    
+    <tr><td style="height: 5px;"></td></tr>
+    
+    <tr>
+    <td style="font-size: 16px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+      Ковер Ungaro-Sketch 160x230
+    </td>
+    </tr>
+    
+    <tr><td style="height: 5px;"></td></tr>
+    
+    <tr>
+    <td>
+    <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+    <td style="font-size: 22px ; line-height: 32px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+      10 490 ₽
+    </td>
+    <td style="width: 14px;"></td>
+    <td style="font-size: 16px ; line-height: 32px; text-decoration: line-through; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+      11 690 ₽
+    </td>
+    </tr>
+    </table>
+    </td>
+    </tr>
+    
+    <tr><td style="height: 8px;"></td></tr>
+    
+    <tr>
+    <td>
+    <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+    <td style="width: 11px;">
+    <img src="./img/content/sber.png" style="width: 11px;" alt="">
+    </td>
+    <td style="width: 8px;"></td>
+    <td style="font-size: 13px ; line-height: 19px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #787878;">
+    Рассрочка от <span style="color: #404040;"> 1749 ₽ в мес. </span>
+    </td>
+    </tr>
+    </table>
+    </td>
+    </tr>
+    
+    <tr><td style="height: 15px;"></td></tr>
+    
+    <tr>
+    <td style="text-align: center; border-width: 1px; border-radius: 4px; border-style: solid; border-color: #C4C4C4;">
+    <a href="https://www.divan.ru/product/kover-ungaro-sketch-160x230" target="_blank" style="display: block; margin: 0; text-align: center; font-weight: 600; text-decoration: none;  font-size: 16px ; line-height: 50px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+    Купить
+    </a>
+    </td>
+    </tr>
+    
+    </table>
+    </td>
+    <!-- -Product-4 -->
+    </tr>
+    </table>
+    </td>
+    </tr>
+
+    <tr><td style="height: 40px;"></td></tr>
+
+</table>
+</td>
+</tr>
+<!-- -Content -->
+
+<tr><td style="height: 20px; background-color: #D1CDCC;"></td></tr>
+
+
+<tr>
+  <td>
+  <table border="0" cellpadding="0" cellspacing="0" style=" width: 560px; padding: 0 20px;">
+  <tr><td style="height: 50px;"></td></tr>
+  <tr>
+  <td style="width: 520px; font-size: 40px !important; line-height: 52px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+  ПРОЕКТ ЦЕЛИКОМ
+  </td>
+  </tr>
+  <tr><td style="height: 50px;"></td></tr>
+  <tr>
+  <td style="width: 560px;">
+  <a href="https://www.divan.ru/idei-i-trendy/52-kvm-arkij-miks-skandi-i-retro-v-dvuhkomnatnoj-kvartire" 
+  target="_blank" style="display: block; text-decoration: none;">
+  <img src="./img/content/card-1.png" style="display: block; width: 560px;" alt="">
+  </a>
+  </td>
+  </tr>
+  <tr><td style="height: 20px;"></td></tr>
+  <tr>
+  <td style="width: 520px;font-size: 22px !important; font-weight: 600; line-height: 33px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+    52 кв.м: яркий микс сканди и ретро<br> в двухкомнатной квартире
+  </td>
+  </tr>
+  <tr><td style="height: 20px;"></td></tr>
+  <tr>
+  <td style="width: 520px;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+    В этой квартире дизайнер Мила Генч собрала элементы разных стилей. Основой стал светло-серый фон. Жизни и красок добавили цветные выкрасы, яркая мебель, декор с уклоном в ретро и современное искусство.  
+  </td>
+  </tr>
+  <tr><td style="height: 20px;"></td></tr>
+  <tr>
+  <td style="width: 520px; ">
+  <a href="https://www.divan.ru/idei-i-trendy/52-kvm-arkij-miks-skandi-i-retro-v-dvuhkomnatnoj-kvartire" 
+  target="_blank" style="display: inline-block;border-bottom: 1px solid #404040; text-decoration: none;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+  Смотреть проект
+  </a>
+  </td>                
+  </tr>
+  <tr><td style="height: 60px;"></td></tr>
+  </table>
+  </td>
+  </tr>
+
+  <tr><td style="height: 20px; background-color: #D1CDCC;"></td></tr>
+<!-- +Footer -->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="padding: 0 20px">
+<tr><td style="height: 30px"></td></tr>
+
+<tr>
+<td style="vertical-align:top">
+<table>
+  <tr>
+    <td align="left" style="width: 280px">
+      <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+        <td style="padding-right: 8px;">
+        <a href="https://t.me/officialdivanru" title="telegram" target="_blank" style="width: 40px; height: 40px; text-decoration: none;">
+        <img src="img/footer/telegram.png" style="width: 40px;" alt="telegram" />
+        </a>
+        </td>
+        <td style="padding-right: 8px;">
+        <a href="https://www.youtube.com/channel/UCHmpEu-ysoKTMZvY9TMHj4g?sub_confirmation=1" title="youtube" target="_blank" style="width: 40px; height: 40px; text-decoration: none;">
+        <img src="img/footer/youtube.png" style="width: 40px;" alt="youtube" />
+        </a>
+        </td>
+        <td style="padding-right: 8px;">
+        <a href="http://vk.com/ilovedivan" title="vk" target="_blank" style="width: 40px; height: 40px; text-decoration: none;">
+        <img src="img/footer/vk.png" style="width: 40px;" alt="vk" />
+        </a>
+        </td>
+        <td style="padding-right: 8px;">
+        <a href="https://dzen.ru/divanru" title="dzen" target="_blank" style="width: 40px; height: 40px; text-decoration: none;">
+        <img src="img/footer/dzen.png" style="width: 40px;" alt="dzen" />
+        </a>
+        </td>
+        <td>
+        <a href="https://pin.it/2esrMUt" title="pinterest" target="_blank" style="width: 40px; height: 40px; margin: 0; text-decoration: none;">
+        <img src="img/footer/pinterest.png" style="width: 40px;" alt="pinterest" />
+        </a>
+        </td>                      
+        </tr>
+      </table>
+    </td>
+    <td align="right" style="width: 280px">
+      <a href="https://market.yandex.ru/shop--divan-ru/309964/reviews" style="text-decoration: none; color: none;">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr>
+          <td style="font-size: 14px ; line-height: 21px; font-weight: 700; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">Читайте отзывы</td>
+          </tr>
+          <tr>
+          <td style="height: 3px;"></td>
+          </tr>
+          <tr>
+          <td>
+          <table border="0" cellpadding="0" cellspacing="0">
+          <tr>
+          <td style="font-size: 14px ; line-height: 21px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">Яндекс.Маркет</td>
+          <td style="width: 10px;"></td>
+          <td>
+          <table border="0" cellpadding="0" cellspacing="0">
+          <tr>
+          <td>
+          <img src="img/footer/star_full.png" style="width: 14px; padding-left: 1px;" alt="star">
+          </td>
+          <td>
+          <img src="img/footer/star_full.png" style="width: 14px; padding-left: 1px;" alt="star">
+          </td>
+          <td>
+          <img src="img/footer/star_full.png" style="width: 14px; padding-left: 1px;" alt="star">
+          </td>
+          <td>
+          <img src="img/footer/star_full.png" style="width: 14px; padding-left: 1px;" alt="star">
+          </td>
+          <td>
+          <img src="img/footer/star_hollow.png" style="width: 14px;" alt="star">
+          </td>
+          </tr>
+          </table>
+          </td>
+          </tr>
+          </table>
+          </td>
+          </tr>
+          </table>
+      </a>
+      </td>
+    </tr>
+</table>
+</td>
+</tr>
+
+
+
+
+<tr><td style="height: 30px"></td></tr>
+<tr>
+<td>
+<a href="https://www.divan.ru/site/delivery" title="divan.ru/site/delivery" target="_blank" style="display: block;  height: 77px;  text-decoration: none;">
+<img src="img/footer/delivery_with_stop.gif" style="display: block;  height: 77px; border: 0; pointer-events: none;" alt="">
+</a>
+</td>
+</tr>
+<tr>
+<td style="width: 520px; display: block; margin: 0 20px; border-bottom: 1px solid #bfbfbf;"></td>
+</tr>
+<tr><td style="height: 20px"></td></tr>
+<tr>
+<td>
+<table align='center'>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 100%">
+<tr>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/akcii-skidki" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Акции
+</a>
+</td>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/category/divany-i-kresla" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Диваны
+</a>
+</td>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/category/stoly-i-stulya" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Столы и стулья
+</a>
+</td>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/category/kovry-i-tekstil" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Ковры и текстиль
+</a>
+</td>
+<td style="padding-right: 0px; text-align: center;">
+<a href="https://www.divan.ru/category/svet" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Освещение
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td style="height: 30px"></td></tr>
+<tr>
+<td align="center" style="width: 520px;  text-align: center; font-family: 'Arial', sans-serif; font-size: 14px ; -webkit-text-size-adjust: none; line-height: 21px; color: #989898;">
+Вы получили это письмо, потому что подписались на рассылку на сайте divan.ru. Если вы не хотите больше получать наши письма, 
+<a href="${Message.UnsubscribeLink}" target="_blank" style="width: 520px; color: #157EE9; text-decoration: underline;">
+отпишитесь.
+</a>
+</td>
+</tr>
+<tr><td style="height: 15px"></td></tr>
+<tr>
+<td align="center" style="width: 520px;  text-align: center;">
+<a href="${Message.AccessibilityLink}" target="_blank" style="display: inline-block; height: 29px; border-bottom: 1px solid #989898; font-family: 'Arial', sans-serif; font-size: 18px ; -webkit-text-size-adjust: none; line-height: 150%; padding: 0; color: #989898 ; text-decoration: none; ">
+Веб-версия
+</a>
+</td>
+</tr>
+<tr><td style="height: 30px"></td></tr>
+</table>
+</td>
+</tr>
+<!-- -Footer -->  
+</table>
+</td>
+</tr>
+</table>
+</body>
+<div style="display:none; white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+</html>

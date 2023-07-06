@@ -1,0 +1,410 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Благодарим за выбор коллекции</title>
+
+</head>
+<body style="margin: 0; background-color: #D1CDCC;">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 600px; margin: 0 auto; padding: 20px; background-color: #D1CDCC;">
+<tbody>
+<!-- +Preheader -->
+<tr>
+<td style="display: none;">
+&nbsp;Новинка «Тут рядом» 💛&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;
+</td>
+</tr>
+<!-- -Preheader -->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="background-color: #fafafa;">
+<!-- +Header-->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="background: url(./img/header/background.jpg);">
+<tbody>
+<tr>
+<td>
+<a href="https://www.divan.ru/anton-tut-ryadom" title="divan.ru" target="_blank" style="text-decoration: none;">
+<img src="img/header/logo.png" style="display: block; width: 600px;" alt="divan.ru" />
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- -Header-->
+<!-- +Current balance -->
+<tr style="background-color: #333333;">
+<td align="center" style="background-color: #333333;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;  margin: 0; padding: 0; background-color: #333333;">
+<tr>
+<td style="width: 20px"></td>
+<td>
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 100%; margin: 0; padding: 0;">
+<tr>
+<td style="padding: 0 0 10px"></td>
+</tr>
+@{if Recipient.IsInSegment("UchastnikyPL") and
+Recipient.GetBonusPointsAccount("BalanceMain").Total
+> 0}
+<tr>
+<td
+style="display: block; margin: 0; padding: 0; text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+@{if
+IsEmpty(Recipient.OnlyStandardFirstName)}Ваш
+@{else} ${Recipient.OnlyStandardFirstName }, ваш
+@{end if} баланс
+<a href="https://divan.ru/cabinet/" target="_blank" style="color: #ffffff; text-decoration: underline;">
+${Recipient.GetBonusPointsAccount("BalanceMain").Available}
+/
+${Recipient.GetBonusPointsAccount("BalanceMain").Total}
+бонусов
+</a>
+</td>
+</tr>
+@{else if Recipient.IsInSegment("UchastnikyPL") and
+Recipient.GetBonusPointsAccount("BalanceMain").Total
+= 0}
+<tr>
+<td style="display: block; margin: 0; padding: 0; text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+@{if IsEmpty(Recipient.OnlyStandardFirstName)}У
+вас @{else} ${Recipient.OnlyStandardFirstName },
+у вас @{end if} пока нет
+<a href="https://www.divan.ru/cabinet/" target="_blank" style="color: #ffffff; text-decoration: underline;">
+бонусов.
+</a>
+</td>
+</tr>
+@{else}
+<tr>
+<td style="display: block; margin: 0; padding: 0; text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+У вас пока нет бонусов.
+<a href="https://www.divan.ru/site/divan-club" target="_blank" style="color: #ffffff; text-decoration: underline;">
+Зарегистрируйтесь.
+</a>
+</td>
+</tr>
+@{end if}
+<tr>
+<td style="padding: 0 0 10px"></td>
+</tr>
+</table>
+</td>
+<td style="width: 20px"></td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- -Current balance -->
+<!-- +Main-banner -->
+<tr>
+<td>
+<a href="https://www.divan.ru/anton-tut-ryadom" target="_blank" style="text-decoration: none;">
+<img src="./img/content/main-banner.png" style="display: block; width: 600px;" alt="">
+</a>                  
+</td>
+</tr>
+<!-- -Main-banner -->
+<!-- +Content -->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="padding: 0 20px; width: 600px">
+
+<tr><td style="height: 50px;"></td></tr>
+<tr>
+<td style="text-align:left; font-size: 24px ; line-height: 36px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+  Лимитированную коллекцию мебели и текстиля мы создали вместе с сотрудниками и студентами фонда «Антон тут рядом». Это первая в России организация, которая оказывает комплексную поддержку людям с расстройствами аутистического спектра. 
+</td>
+</tr>
+<tr><td style="height: 40px;"></td></tr>
+<tr>
+  <td style="text-align:left; font-size: 24px ; line-height: 36px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+    Обнимающие формы, тактильные фактуры и теплые оттенки — все предметы в коллекции про мягкость бытия. А еще — про заботу друг о друге.
+  </td>
+</tr>
+<tr><td style="height: 40px;"></td></tr>
+<tr>
+  <td style="text-align:left; font-size: 24px ; line-height: 36px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+    Вся выручка от продажи идет на поддержку программ фонда, а студенты инклюзивных мастерских получают возможность самостоятельно зарабатывать (они помогут отшивать чехлы для пуфов). Покупая предметы из этой коллекции, вы делаете ценный вклад в общее доброе дело.
+  </td>
+</tr>
+<tr><td style="height: 40px;"></td></tr>
+<tr align="left">
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 320px;">
+<tbody>
+<tr>
+<td style="border-radius: 4px; background-color: #404040; text-align: center;">
+<a href="https://www.divan.ru/idei-i-trendy/eto-moj-dom-i-derevo-u-doma-kak-sozdavalis-printy-dla-kollekcii-divanru-h-anton-tut-radom" 
+target="_blank" style="display: block; white-space: nowrap; text-decoration: none; font-size: 18px ; line-height: 55px; font-weight: 700; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #fafafa;">
+Узнать больше
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr><td style="height: 80px;"></td></tr>
+<!-- +Card-1 -->
+<tr>
+  <td>
+    <table border="0" cellpadding="0" cellspacing="0" style="width:560px">
+      <tr>
+        <td>
+          <a href="https://www.divan.ru/product/divan-tut-ryadom-dom-sine-bejevyj" target="_blank">
+            <img src="./img/content/card_1.png" alt="??" style="width:560px"/>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td align="left">
+          <table border="0" cellpadding="0" cellspacing="0" style="width:435px">
+            <tr><td style="width: 520px;font-size: 22px !important; font-weight: 600; line-height: 33px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">Диван «Тут Рядом Дом»</td></tr>
+            <tr><td style="height: 10px;"></td></tr>
+            <tr><td style="width: 520px;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">Притягательный диван с обнимающими формами. Рисунок принта обивки придумал студент фонда «Антон тут рядом». Внутри — комбинация наполнителей для максимального комфорта.</td></tr>
+            <tr><td style="height: 20px;"></td></tr>
+            <tr>
+              <td>
+                <a href="https://www.divan.ru/product/divan-tut-ryadom-dom-sine-bejevyj" 
+              target="_blank" style="display: inline-block;border-bottom: 1px solid #404040; text-decoration: none;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+              Подробнее
+                </a>
+            </td>
+          </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<!-- -Card-1 -->
+<tr><td style="height: 60px;"></td></tr>
+<!-- +Card-2 -->
+<tr>
+  <td>
+    <table border="0" cellpadding="0" cellspacing="0" style="width:560px">
+      <tr>
+        <td>
+          <a href="https://www.divan.ru/product/pled-tut-ryadom-teplo-oranjevyj-140x200" target="_blank">
+            <img src="./img/content/card_2.png" alt="??" style="width:551px"/>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td align="right">
+          <table border="0" cellpadding="0" cellspacing="0" style="width:435px">
+            <tr><td style="width: 520px;font-size: 22px !important; font-weight: 600; line-height: 33px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">Плед «Тут Рядом Тепло» 140x200</td></tr>
+            <tr><td style="height: 10px;"></td></tr>
+            <tr><td style="width: 520px;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">Плед с помпонами — нежный и обнимательный, как мурчащий кот. Ткань экологичная и гипоаллергенная, создана из 100% переработанного волокна. </td></tr>
+            <tr><td style="height: 20px;"></td></tr>
+            <tr>
+              <td>
+                <a href="https://www.divan.ru/product/pled-tut-ryadom-teplo-oranjevyj-140x200" 
+              target="_blank" style="display: inline-block;border-bottom: 1px solid #404040; text-decoration: none;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+              Подробнее
+                </a>
+            </td>
+          </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<!-- -Card-2 -->
+<tr><td style="height: 60px;"></td></tr>
+<!-- +Card-3 -->
+<tr>
+  <td>
+    <table border="0" cellpadding="0" cellspacing="0" style="width:560px">
+      <tr>
+        <td>
+          <a href="https://www.divan.ru/product/puf-tut-ryadom-krasavchik-jeltyj" target="_blank">
+            <img src="./img/content/card_3.png" alt="??" style="width:539px"/>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td align="left">
+          <table border="0" cellpadding="0" cellspacing="0" style="width:435px">
+            <tr><td style="width: 520px;font-size: 22px !important; font-weight: 600; line-height: 33px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">Пуф «Тут Рядом Красавчик»</td></tr>
+            <tr><td style="height: 10px;"></td></tr>
+            <tr><td style="width: 520px;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">Бескаркасный пуф в обивке с нежным ворсом. Легкий, комфортный и не теряет форму благодаря особому наполнителю.</td></tr>
+            <tr><td style="height: 20px;"></td></tr>
+            <tr>
+              <td>
+                <a href="https://www.divan.ru/product/puf-tut-ryadom-krasavchik-jeltyj" 
+              target="_blank" style="display: inline-block;border-bottom: 1px solid #404040; text-decoration: none;  font-size: 18px !important; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+              Подробнее
+                </a>
+            </td>
+          </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<!-- -Card-3 -->
+<tr><td style="height: 80px;"></td></tr>
+</table>
+</td>
+</tr>
+<!-- -Content -->
+<!-- +Note -->
+<tr>
+  <td align="center">
+  <table border="0" cellpadding="0" cellspacing="0" style="width: 600px; background-color:#F5F3F1">
+  <tr><td style="height: 50px;"></td></tr>
+  <tr>
+  <td align='center' style="padding:0 48px; text-align:center; font-size: 18px; line-height: 27px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+    Оформите предзаказ — будьте в числе первых обладателей изделий из лимитированной коллекции <br>«Тут рядом».
+  </td>
+  </tr>
+  <tr><td style="height: 38px;"></td></tr>
+  <tr>
+  <td align='center' style="width: 300px;">
+  <table border="0" cellpadding="0" cellspacing="0" style="width: 300px;">
+  <tbody>
+  <tr>
+  <td style="min-width: 300px; border-radius: 4px; background-color: #404040; text-align: center;">
+  <a href="https://www.divan.ru/category/promo-anton-tut-ryadom" 
+  target="_blank" style="display: block; min-width: 300px; white-space: nowrap; text-decoration: none; font-size: 18px ; line-height: 55px; font-weight: 700; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #fafafa;">
+  Оформить предзаказ
+  </a>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  </td>
+  </tr>
+  <tr><td style="height: 60px;"></td></tr>
+  </table>
+  </td>
+</tr>
+<!-- -Note -->
+<tr><td style="height: 20px; background-color: #D1CDCC;"></td></tr>
+<!-- +Footer -->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="padding: 0 20px">
+<tr><td style="height: 30px"></td></tr>
+<tr>
+<td align="center" style="">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 232px;">
+<tbody>
+<tr>
+<td style="padding-right: 8px;">
+<a href="https://t.me/officialdivanru" title="telegram" target="_blank" style="display: block; width: 40px; height: 40px; margin: 0; text-decoration: none;">
+<img src="img/footer/telegram.png" style="display: block; width: 100%; border: 0; pointer-events: none;" alt="telegram" />
+</a>
+</td>
+<td style="padding-right: 8px;">
+<a href="https://www.youtube.com/channel/UCHmpEu-ysoKTMZvY9TMHj4g?sub_confirmation=1" title="youtube" target="_blank" style="display: block; width: 40px; height: 40px; margin: 0; text-decoration: none;">
+<img src="img/footer/youtube.png" style="display: block; width: 100%; border: 0; pointer-events: none;" alt="youtube" />
+</a>
+</td>
+<td style="padding-right: 8px;">
+<a href="http://vk.com/ilovedivan" title="vk" target="_blank" style="display: block; width: 40px; height: 40px; margin: 0; text-decoration: none;">
+<img src="img/footer/vk.png" style="display: block; width: 100%; border: 0; pointer-events: none;" alt="vk" />
+</a>
+</td>
+<td style="padding-right: 8px;">
+<a href="https://dzen.ru/divanru" title="dzen" target="_blank" style="display: block; width: 40px; height: 40px; margin: 0; text-decoration: none;">
+<img src="img/footer/dzen.png" style="display: block; width: 100%; border: 0; pointer-events: none;" alt="dzen" />
+</a>
+</td>
+<td>
+<a href="https://pin.it/2esrMUt" title="pinterest" target="_blank" style="display: block; width: 40px; height: 40px; margin: 0; text-decoration: none;">
+<img src="img/footer/pinterest.png" style="display: block; width: 100%; border: 0; pointer-events: none;" alt="pinterest" />
+</a>
+</td>                      
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr><td style="height: 30px"></td></tr>
+<tr>
+<td>
+<a href="https://www.divan.ru/site/delivery" title="divan.ru/site/delivery" target="_blank" style="display: block;  height: 77px; margin: 0; padding: 0; text-decoration: none;">
+<img src="img/footer/delivery_with_stop.gif" style="display: block;  height: 77px; border: 0; pointer-events: none;" alt="">
+</a>
+</td>
+</tr>
+<tr>
+<td style="width: 520px; display: block; margin: 0 20px; border-bottom: 1px solid #bfbfbf;"></td>
+</tr>
+<tr><td style="height: 20px"></td></tr>
+<tr>
+<td>
+<table align='center'>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 100%">
+<tr>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/akcii-skidki" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Акции
+</a>
+</td>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/category/divany-i-kresla" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Диваны
+</a>
+</td>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/category/stoly-i-stulya" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Столы и стулья
+</a>
+</td>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/category/kovry-i-tekstil" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Ковры и текстиль
+</a>
+</td>
+<td style="padding-right: 0px; text-align: center;">
+<a href="https://www.divan.ru/category/svet" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Освещение
+</a>
+</td>
+</tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr><td style="height: 30px"></td></tr>
+<tr>
+<td align="center" style="width: 520px;  text-align: center; font-family: 'Arial', sans-serif; font-size: 14px ; -webkit-text-size-adjust: none; line-height: 21px; color: #989898;">
+Вы получили это письмо, потому что подписались на рассылку на сайте divan.ru. Если вы не хотите больше получать наши письма, 
+<a href="${Message.UnsubscribeLink}" target="_blank" style="width: 520px; color: #157EE9; text-decoration: underline;">
+отпишитесь.
+</a>
+</td>
+</tr>
+<tr><td style="height: 15px"></td></tr>
+<tr>
+<td align="center" style="width: 520px;  text-align: center;">
+<a href="${Message.AccessibilityLink}" target="_blank" style="display: inline-block; height: 29px; border-bottom: 1px solid #989898; font-family: 'Arial', sans-serif; font-size: 18px ; -webkit-text-size-adjust: none; line-height: 150%; padding: 0; color: #989898 ; text-decoration: none; ">
+Веб-версия
+</a>
+</td>
+</tr>
+<tr><td style="height: 30px"></td></tr>
+</table>
+</td>
+</tr>
+<!-- -Footer -->
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+<div style="display:none; white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+</html>

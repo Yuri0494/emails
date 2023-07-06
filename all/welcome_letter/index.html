@@ -1,0 +1,290 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ваши бонусы на покупки</title>
+  </head>
+  <body style="margin: 0;">
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 600px; margin: 0 auto; padding: 20px; background-color: #D1CDCC;">
+      <tbody>
+        <!-- +Preheader -->
+        <tr>
+          <td style="display: none;">
+            &nbsp;🎁 Скорее забирайте подарок&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;
+          </td>
+        </tr>
+        <!-- -Preheader -->
+        <tr>
+          <td>
+            <table border="0" cellpadding="0" cellspacing="0" style="background-color: #fafafa;">
+
+              <!-- +Header-->
+              <tr>
+                <td>
+                  <table border="0" cellpadding="0" cellspacing="0" style="background: url(./img/header/background.jpg);">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <a href="https://www.divan.ru/site/divan-club" title="divan.ru" target="_blank" style="text-decoration: none;">
+                            <img src="img/header/logo.png" style="display: block; width: 600px;" alt="divan.ru" />
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <!-- -Header-->
+
+              <!-- +Current balance -->
+              <tr style="background-color: #333333;">
+                <td align="center" style="background-color: #333333;">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;  margin: 0; padding: 0; background-color: #333333;">
+                    <tr>
+                      <td style="width: 20px"></td>
+                      <td>
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 100%; margin: 0; padding: 0;">
+                          <tr>
+                            <td style="padding: 0 0 10px"></td>
+                          </tr>
+                          @{if Recipient.IsInSegment("UchastnikyPL") and
+                          Recipient.GetBonusPointsAccount("BalanceMain").Total
+                          > 0}
+                          <tr>
+                            <td
+                              style="display: block; margin: 0; padding: 0; text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+                              @{if
+                              IsEmpty(Recipient.OnlyStandardFirstName)}Ваш
+                              @{else} ${Recipient.OnlyStandardFirstName }, ваш
+                              @{end if} баланс
+                              <a href="https://divan.ru/cabinet/" target="_blank" style="color: #ffffff; text-decoration: underline;">
+                                ${Recipient.GetBonusPointsAccount("BalanceMain").Available}
+                                /
+                                ${Recipient.GetBonusPointsAccount("BalanceMain").Total}
+                                бонусов
+                              </a>
+                            </td>
+                          </tr>
+                          @{else if Recipient.IsInSegment("UchastnikyPL") and
+                          Recipient.GetBonusPointsAccount("BalanceMain").Total
+                          = 0}
+                          <tr>
+                            <td style="display: block; margin: 0; padding: 0; text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+                              @{if IsEmpty(Recipient.OnlyStandardFirstName)}У
+                              вас @{else} ${Recipient.OnlyStandardFirstName },
+                              у вас @{end if} пока нет
+                              <a href="https://www.divan.ru/cabinet/" target="_blank" style="color: #ffffff; text-decoration: underline;">
+                                бонусов.
+                              </a>
+                            </td>
+                          </tr>
+                          @{else}
+                          <tr>
+                            <td style="display: block; margin: 0; padding: 0; text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+                              У вас пока нет бонусов.
+                              <a href="https://www.divan.ru/site/divan-club" target="_blank" style="color: #ffffff; text-decoration: underline;">
+                                Зарегистрируйтесь.
+                              </a>
+                            </td>
+                          </tr>
+                          @{end if}
+                          <tr>
+                            <td style="padding: 0 0 10px"></td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td style="width: 20px"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- -Current balance -->
+
+              <tr>
+                <td>
+                  <a href="https://www.divan.ru/site/divan-club" target="_blank" style="text-decoration: none;">
+                    <img src="./img/content/main-banner.png" style="display: block; width: 600px;" alt="">
+                  </a>                  
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <table border="0" cellpadding="0" cellspacing="0" style="padding: 0 20px; width: 600px">
+
+                    <tr><td style="height: 50px;"></td></tr>
+
+                    <tr>
+                      <td style="font-size: 22px ; line-height: 36px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+                        Устроить большую переделку или добавить пару штрихов в привычную обстановку? Поможем решить любую интерьерную задачу легко, стильно и выгодно!</td>
+                    </tr>
+
+                    <tr><td style="height: 28px;"></td></tr>
+
+                    <tr>
+                      <td align="center" style="width: 560px; height: 132px; background-color: #D8F0E2;">
+                        <table border="0" cellpadding="0" cellspacing="0" style="width: 452px;">
+                          <tbody>
+                            <tr>
+                              <td style=" text-align:cnter; font-size: 24px ; line-height: 36px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+                                Дарим 1000 бонусов на покупки — успейте потратить в течение 30 дней.</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr><td style="height: 28px;"></td></tr>
+
+                    <tr align="left">
+                      <td style="width: 360px;">
+                        <table border="0" cellpadding="0" cellspacing="0" style="margin: 0; padding: 0; width: 320px;">
+                          <tbody>
+                            <tr>
+                              <td style="min-width: 320px; border-radius: 4px; background-color: #404040; text-align: center;">
+                                <a href="https://www.divan.ru/catalog/product" 
+                                  target="_blank" style="display: block; min-width: 320px; margin: 0; padding: 0; white-space: nowrap; text-decoration: none; font-size: 18px ; line-height: 55px; font-weight: 500; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #fafafa;">
+                                  В каталог
+                                </a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr><td style="height: 28px;"></td></tr>
+
+                    <tr>
+                      <td style="font-size: 13px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+                        Наши подписчики первыми узнают о лучших распродажах.<br>Вы всегда можете отписаться по ссылке внизу письма.
+                      </td>
+                    </tr>
+
+                    <tr><td style="height: 50px;"></td></tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr><td style="height: 20px; background-color: #D1CDCC;"></td></tr>
+              <!-- +Footer -->
+              <tr>
+                <td>
+                <table border="0" cellpadding="0" cellspacing="0" style="padding: 0 20px">
+                <tr><td style="height: 30px"></td></tr>
+                <tr>
+                <td align="center" style="">
+                <table border="0" cellpadding="0" cellspacing="0" style="width: 232px;">
+                <tbody>
+                <tr>
+                <td style="padding-right: 8px;">
+                <a href="https://t.me/officialdivanru" title="telegram" target="_blank" style="display: block; width: 40px; height: 40px; margin: 0; text-decoration: none;">
+                <img src="img/footer/telegram.png" style="display: block; width: 100%; border: 0; pointer-events: none;" alt="telegram" />
+                </a>
+                </td>
+                <td style="padding-right: 8px;">
+                <a href="https://www.youtube.com/channel/UCHmpEu-ysoKTMZvY9TMHj4g?sub_confirmation=1" title="youtube" target="_blank" style="display: block; width: 40px; height: 40px; margin: 0; text-decoration: none;">
+                <img src="img/footer/youtube.png" style="display: block; width: 100%; border: 0; pointer-events: none;" alt="youtube" />
+                </a>
+                </td>
+                <td style="padding-right: 8px;">
+                <a href="http://vk.com/ilovedivan" title="vk" target="_blank" style="display: block; width: 40px; height: 40px; margin: 0; text-decoration: none;">
+                <img src="img/footer/vk.png" style="display: block; width: 100%; border: 0; pointer-events: none;" alt="vk" />
+                </a>
+                </td>
+                <td style="padding-right: 8px;">
+                <a href="https://dzen.ru/divanru" title="dzen" target="_blank" style="display: block; width: 40px; height: 40px; margin: 0; text-decoration: none;">
+                <img src="img/footer/dzen.png" style="display: block; width: 100%; border: 0; pointer-events: none;" alt="dzen" />
+                </a>
+                </td>
+                <td>
+                <a href="https://pin.it/2esrMUt" title="pinterest" target="_blank" style="display: block; width: 40px; height: 40px; margin: 0; text-decoration: none;">
+                <img src="img/footer/pinterest.png" style="display: block; width: 100%; border: 0; pointer-events: none;" alt="pinterest" />
+                </a>
+                </td>                      
+                </tr>
+                </tbody>
+                </table>
+                </td>
+                </tr>
+                <tr><td style="height: 30px"></td></tr>
+                <tr>
+                <td>
+                <a href="https://www.divan.ru/site/delivery" title="divan.ru/site/delivery" target="_blank" style="display: block;  height: 77px; margin: 0; padding: 0; text-decoration: none;">
+                <img src="img/footer/delivery_with_stop.gif" style="display: block;  height: 77px; border: 0; pointer-events: none;" alt="">
+                </a>
+                </td>
+                </tr>
+                <tr>
+                <td style="width: 520px; display: block; margin: 0 20px; border-bottom: 1px solid #bfbfbf;"></td>
+                </tr>
+                <tr><td style="height: 20px"></td></tr>
+                <tr>
+                <td>
+                <table align='center'>
+                <td>
+                <table border="0" cellpadding="0" cellspacing="0" style="width: 100%">
+                <tr>
+                <td style="padding-right: 35px; text-align: center;">
+                <a href="https://www.divan.ru/akcii-skidki" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+                Акции
+                </a>
+                </td>
+                <td style="padding-right: 35px; text-align: center;">
+                <a href="https://www.divan.ru/category/divany-i-kresla" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+                Диваны
+                </a>
+                </td>
+                <td style="padding-right: 35px; text-align: center;">
+                <a href="https://www.divan.ru/category/stoly-i-stulya" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+                Столы и стулья
+                </a>
+                </td>
+                <td style="padding-right: 35px; text-align: center;">
+                <a href="https://www.divan.ru/category/kovry-i-tekstil" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+                Ковры и текстиль
+                </a>
+                </td>
+                <td style="padding-right: 0px; text-align: center;">
+                <a href="https://www.divan.ru/category/svet" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+                Освещение
+                </a>
+                </td>
+                </tr>
+                </table>
+                </td>
+                </table>
+                </td>
+                </tr>
+                <tr><td style="height: 30px"></td></tr>
+                <tr>
+                <td align="center" style="width: 520px;  text-align: center; font-family: 'Arial', sans-serif; font-size: 14px ; -webkit-text-size-adjust: none; line-height: 21px; color: #989898;">
+                Вы получили это письмо, потому что подписались на рассылку на сайте divan.ru. Если вы не хотите больше получать наши письма, 
+                <a href="${Message.UnsubscribeLink}" target="_blank" style="width: 520px; color: #157EE9; text-decoration: underline;">
+                отпишитесь.
+                </a>
+                </td>
+                </tr>
+                <tr><td style="height: 15px"></td></tr>
+                <tr>
+                <td align="center" style="width: 520px;  text-align: center;">
+                <a href="${Message.AccessibilityLink}" target="_blank" style="display: inline-block; height: 29px; border-bottom: 1px solid #989898; font-family: 'Arial', sans-serif; font-size: 18px ; -webkit-text-size-adjust: none; line-height: 150%; padding: 0; color: #989898 ; text-decoration: none; ">
+                Веб-версия
+                </a>
+                </td>
+                </tr>
+                <tr><td style="height: 30px"></td></tr>
+                </table>
+                </td>
+                </tr>
+              <!-- -Footer -->
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+  <div style="display:none; white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
+</html>

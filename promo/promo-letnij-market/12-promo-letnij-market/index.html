@@ -1,0 +1,1533 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>🌊 Ловите волну скидок 🏄</title>
+</head>
+<body style="margin: 0; background-color: #D1CDCC;">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 600px; margin: 0 auto; padding: 20px; background-color: #D1CDCC;">
+<tbody>
+<!-- +Preheader -->
+<tr>
+<td style="display: none;">
+&nbsp;Большая летняя распродажа&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;
+</td>
+</tr>
+<!-- -Preheader -->
+<!-- +Content -->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="background-color: #fafafa;">
+<!-- +Header-->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="background: url(./img/header/background.jpg);">
+<tbody>
+<tr>
+<td>
+<a href="https://divan.ru/" title="divan.ru" target="_blank" style="text-decoration: none;">
+<img src="img/header/logo.png" style="display: block; width: 300px;" alt="divan.ru" />
+</a>
+</td>
+<td>
+<a href="https://www.divan.ru/catalog/room" title="divan.ru" target="_blank" style="text-decoration: none;">
+<img src="img/header/rooms.png" style="display: block; width: 300px;" alt="Комнаты" />
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- -Header-->
+<!-- +Current balance -->
+<tr style="background-color: #333333;">
+<td align="center" style="background-color: #333333;">
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;  margin: 0; padding: 0; background-color: #333333;">
+<tr>
+<td style="width: 20px"></td>
+<td>
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 100%; margin: 0; padding: 0;">
+<tr>
+<td style="padding: 0 0 10px"></td>
+</tr>
+@{if Recipient.IsInSegment("UchastnikyPL") and
+Recipient.GetBonusPointsAccount("BalanceMain").Total
+> 0}
+<tr>
+<td
+style="display: block; margin: 0; padding: 0; text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+@{if
+IsEmpty(Recipient.OnlyStandardFirstName)}Ваш
+@{else} ${Recipient.OnlyStandardFirstName }, ваш
+@{end if} баланс
+<a href="https://divan.ru/cabinet/" target="_blank" style="color: #ffffff; text-decoration: underline;">
+${Recipient.GetBonusPointsAccount("BalanceMain").Available}
+/
+${Recipient.GetBonusPointsAccount("BalanceMain").Total}
+бонусов
+</a>
+</td>
+</tr>
+@{else if Recipient.IsInSegment("UchastnikyPL") and
+Recipient.GetBonusPointsAccount("BalanceMain").Total
+= 0}
+<tr>
+<td style="display: block; margin: 0; padding: 0; text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+@{if IsEmpty(Recipient.OnlyStandardFirstName)}У
+вас @{else} ${Recipient.OnlyStandardFirstName },
+у вас @{end if} пока нет
+<a href="https://www.divan.ru/cabinet/" target="_blank" style="color: #ffffff; text-decoration: underline;">
+бонусов.
+</a>
+</td>
+</tr>
+@{else}
+<tr>
+<td style="display: block; margin: 0; padding: 0; text-decoration: none; color: #ffffff; font-size: 14px; line-height: 21px; text-align: center; font-family: 'Verdana', sans-serif;">
+У вас пока нет бонусов.
+<a href="https://www.divan.ru/site/divan-club" target="_blank" style="color: #ffffff; text-decoration: underline;">
+Зарегистрируйтесь.
+</a>
+</td>
+</tr>
+@{end if}
+<tr>
+<td style="padding: 0 0 10px"></td>
+</tr>
+</table>
+</td>
+<td style="width: 20px"></td>
+</tr>
+</table>
+</td>
+</tr>
+<!-- -Current balance -->
+<!-- +Main Banner -->
+<tr>
+<td>
+<a href="http://www.divan.ru/category/promo-letnij-market" target="_blank" style="text-decoration: none;">
+<img src="./img/content/main-banner.jpg" style="display: block; width: 600px;" alt="">
+</a>                  
+</td>
+</tr>
+<!-- -Main Banner -->
+<tr><td style="height: 50px;"></td></tr>
+<!-- +Main text -->
+<tr>
+<td style="font-size: 24px ; line-height: 36px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040; padding: 0 20px;">
+Обустройте интерьер, в котором захочется провести лето. Только 7 дней мебель и товары для дома 
+можно купить со скидкой до -55%. Смотрите все предложения на сайте.
+</td>
+</tr>
+<!-- -Main text -->
+<tr><td style="height: 30px;"></td></tr>
+<!-- +Button -->
+<tr align="left">
+<td style="width: 360px; padding: 0 20px;">
+<table border="0" cellpadding="0" cellspacing="0" style=" width: 320px;">
+<tbody>
+<tr>
+<td style="min-width: 320px; border-radius: 4px; background-color: #404040; text-align: center;">
+<a href="http://www.divan.ru/category/promo-letnij-market" 
+target="_blank" style="display: block; min-width: 320px;  white-space: nowrap; text-decoration: none; font-size: 18px ; line-height: 55px; font-weight: 500; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #fafafa;">
+Выбрать
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- -Button -->
+<tr><td style="height: 30px;"></td></tr>
+<!-- +Condition-->
+<tr>
+<td style="font-size: 13px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898; padding: 0 20px;">
+*Скидка не суммируется с другими акциями и спецпредложениями. 
+</td>
+</tr>
+<!-- -Condition-->
+<tr><td style="height: 80px;"></td></tr>
+<!-- +Title -->
+<tr>
+<td style="font-size: 37px ; font-weight:700; line-height: 24px; text-align:center; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Предложения из подборки
+</td>
+</tr>
+<!-- -Title -->
+
+<tr><td style="height: 50px;"></td></tr>
+
+<!-- +Product 1 -->
+<tr>
+<td style="padding: 0 20px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<a href="https://www.divan.ru/product/divan-uglovoj-siteno-barhat-emerald" target="_blank" style="text-decoration: none;">
+<img src="./img/content/product1.png" style="display: block; width: 560px;" alt="">
+</a>                  
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="width: 265px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<img src="./img/content/bonuses.png" style="width: 14px;" alt="">
+</td>
+<td style="width: 5px;"></td>
+<td style="font-size: 15px ; line-height: 22px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
++2850 бонусов
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td style="font-size: 16px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Диван угловой <br/> 
+Ситено Barhat Emerald
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 22px ; line-height: 32px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+56 990 ₽
+</td>
+<td style="width: 14px;"></td>
+<td style="font-size: 16px ; line-height: 32px; text-decoration: line-through; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+94 990 ₽
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td style="width: 30px;"></td>
+<td style="vertical-align: top; width: 265px;">
+<table border="0" cellpadding="0" cellspacing="0">
+
+<tr align="center">
+<td style=" width: 265px; display: block; border-width: 1px; border-radius: 4px; border-style: solid; border-color: #C4C4C4; text-align: center;">
+<a href="https://www.divan.ru/product/divan-uglovoj-siteno-barhat-emerald" target="_blank" style="display: block; width: 265px; font-weight: 600; white-space: nowrap; text-decoration: none; font-size: 16px ; line-height: 50px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Купить
+</a>
+</td>
+</tr>
+
+<tr><td style="height: 10px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="width: 11px;">
+<img src="./img/content/sber.png" style="width: 11px;" alt="">
+</td>
+<td style="width: 8px;"></td>
+<td style="padding: 0; font-size: 13px ; line-height: 19px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #787878;">
+Рассрочка от <span style="color: #404040;"> 9499 ₽ в мес. </span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>    
+<tr><td style="height: 42px;"></td></tr>
+<!-- -Product 1 -->
+
+<tr><td style="height: 20px;"></td></tr>
+
+<!-- +Products 2, 3 -->
+<tr>
+<td style="padding: 0 20px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<!-- +2 -->
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+
+<tr>
+<td>
+<a href="https://www.divan.ru/product/divan-olen-happy-latte" target="_blank" style="text-decoration: none;">
+<img src="./img/content/product2.png" style="display: block; width: 265px;" alt="">
+</a>
+</td>
+</tr>
+
+<tr><td style="height: 15px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" >
+<tr>
+<td>
+<img src="./img/content/bonuses.png" style="width: 14px;" alt="">
+</td>
+<td style="width: 5px;"></td>
+<td style="padding: 0; font-size: 15px ; line-height: 22px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
++2650 бонусов
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td style="font-size: 16px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Диван <br/>
+Ольен Happy Latte
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 22px ; line-height: 32px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+52 990 ₽
+</td>
+<td style="width: 14px;"></td>
+<td style="font-size: 16px ; line-height: 32px; text-decoration: line-through; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+70 990 ₽
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 8px;"></td></tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td style="width: 11px;">
+      <img src="./img/content/sber.png" style="width: 11px;" alt="">
+    </td>
+    <td style="width: 8px;"></td>
+    <td style="padding: 0; font-size: 13px ; line-height: 19px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #787878;">
+      Рассрочка от <span style="color: #404040;"> 8832 ₽ в мес. </span>
+    </td>
+  </tr>
+</table>
+</td>
+</tr>
+<tr><td style="height: 8px;"></td></tr>
+
+
+<tr>
+<td style="text-align: center; border-width: 1px; border-radius: 4px; border-style: solid; border-color: #C4C4C4;">
+<a href="https://www.divan.ru/product/divan-olen-happy-latte" target="_blank" style="display: block; margin: 0; text-align: center; font-weight: 600; text-decoration: none;  font-size: 16px ; line-height: 50px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Купить
+</a>
+</td>
+</tr>
+
+</table>
+</td>
+<!-- -2 -->
+
+<td style="width: 30px;"></td>
+
+<!-- +3 -->
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+
+<tr>
+<td>
+<a href="https://www.divan.ru/product/divan-mare-mini-velvet-silver" target="_blank" style="text-decoration: none;">
+<img src="./img/content/product3.png" style="display: block; width: 265px;" alt="">
+</a>
+</td>
+</tr>
+
+<tr><td style="height: 15px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" >
+<tr>
+<td>
+<img src="./img/content/bonuses.png" style="width: 14px;" alt="">
+</td>
+<td style="width: 5px;"></td>
+<td style="padding: 0; font-size: 15px ; line-height: 22px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
++1250 бонусов
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td style="font-size: 16px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Диван <br/>
+Маре Мини Velvet Silver
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 22px ; line-height: 32px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+24 990 ₽
+</td>
+<td style="width: 14px;"></td>
+<td style="font-size: 16px ; line-height: 32px; text-decoration: line-through; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+41 990 ₽
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 8px;"></td></tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td style="width: 11px;">
+      <img src="./img/content/sber.png" style="width: 11px;" alt="">
+    </td>
+    <td style="width: 8px;"></td>
+    <td style="padding: 0; font-size: 13px ; line-height: 19px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #787878;">
+      Рассрочка от <span style="color: #404040;"> 4165 ₽ в мес. </span>
+    </td>
+  </tr>
+</table>
+</td>
+</tr>
+<tr><td style="height: 8px;"></td></tr>
+
+<tr>
+<td style="text-align: center; border-width: 1px; border-radius: 4px; border-style: solid; border-color: #C4C4C4;">
+<a href="https://www.divan.ru/product/divan-mare-mini-velvet-silver" target="_blank" style="display: block; margin: 0; text-align: center; font-weight: 600; text-decoration: none;  font-size: 16px ; line-height: 50px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Купить
+</a>
+</td>
+</tr>
+
+</table>
+</td>
+<!-- -3 -->
+</tr>
+</table>
+</td>
+</tr>
+<!-- -Products 2, 3 -->
+
+<tr><td style="height: 40px;"></td></tr>
+
+<!-- +Product 4 -->
+<tr>
+<td style="padding: 0 20px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<a href="https://www.divan.ru/product/obuvnitsa-tajron-2-jungle" target="_blank" style="text-decoration: none;">
+<img src="./img/content/product4.png" style="display: block; width: 560px;" alt="">
+</a>                  
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="width: 265px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<img src="./img/content/bonuses.png" style="width: 14px;" alt="">
+</td>
+<td style="width: 5px;"></td>
+<td style="font-size: 15px ; line-height: 22px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
++750 бонусов
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td style="font-size: 16px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Обувница <br/>
+Тайрон-2 Jungle
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 22px ; line-height: 32px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+14 990 ₽
+</td>
+<td style="width: 14px;"></td>
+<td style="font-size: 16px ; line-height: 32px; text-decoration: line-through; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+16 990 ₽
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td style="width: 30px;"></td>
+<td style="vertical-align: top; width: 265px;">
+<table border="0" cellpadding="0" cellspacing="0">
+
+<tr align="center">
+<td style=" width: 265px; display: block; border-width: 1px; border-radius: 4px; border-style: solid; border-color: #C4C4C4; text-align: center;">
+<a href="https://www.divan.ru/product/obuvnitsa-tajron-2-jungle" target="_blank" style="display: block; width: 265px; font-weight: 600; white-space: nowrap; text-decoration: none; font-size: 16px ; line-height: 50px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Купить
+</a>
+</td>
+</tr>
+
+<tr><td style="height: 10px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="width: 11px;">
+<img src="./img/content/sber.png" style="width: 11px;" alt="">
+</td>
+<td style="width: 8px;"></td>
+<td style="padding: 0; font-size: 13px ; line-height: 19px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #787878;">
+Рассрочка от <span style="color: #404040;"> 2499 ₽ в мес. </span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>    
+<tr><td style="height: 42px;"></td></tr>
+<!-- -Product 4 -->
+
+<tr><td style="height: 20px;"></td></tr>
+
+<!-- +Products 5, 6 -->
+<tr>
+<td style="padding: 0 20px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<!-- +5 -->
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+
+<tr>
+<td>
+<a href="https://www.divan.ru/product/tv-tumba-tajron-1-lace" target="_blank" style="text-decoration: none;">
+<img src="./img/content/product5.png" style="display: block; width: 265px;" alt="">
+</a>
+</td>
+</tr>
+
+<tr><td style="height: 15px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" >
+<tr>
+<td>
+<img src="./img/content/bonuses.png" style="width: 14px;" alt="">
+</td>
+<td style="width: 5px;"></td>
+<td style="padding: 0; font-size: 15px ; line-height: 22px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
++850 бонусов
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td style="font-size: 16px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+ТВ-тумба <br/>
+Тайрон-1 Lace
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 22px ; line-height: 32px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+16 990 ₽
+</td>
+<td style="width: 14px;"></td>
+<td style="font-size: 16px ; line-height: 32px; text-decoration: line-through; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+19 990 ₽
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 8px;"></td></tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td style="width: 11px;">
+      <img src="./img/content/sber.png" style="width: 11px;" alt="">
+    </td>
+    <td style="width: 8px;"></td>
+    <td style="padding: 0; font-size: 13px ; line-height: 19px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #787878;">
+      Рассрочка от <span style="color: #404040;"> 2832 ₽ в мес. </span>
+    </td>
+  </tr>
+</table>
+</td>
+</tr>
+<tr><td style="height: 8px;"></td></tr>
+
+
+<tr>
+<td style="text-align: center; border-width: 1px; border-radius: 4px; border-style: solid; border-color: #C4C4C4;">
+<a href="https://www.divan.ru/product/tv-tumba-tajron-1-lace" target="_blank" style="display: block; margin: 0; text-align: center; font-weight: 600; text-decoration: none;  font-size: 16px ; line-height: 50px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Купить
+</a>
+</td>
+</tr>
+</table>
+</td>
+<!-- -5 -->
+
+<td style="width: 30px;"></td>
+
+<!-- +6 -->
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+
+<tr>
+<td>
+<a href="https://www.divan.ru/product/tumba-prikrovatnaya-orland-wood" target="_blank" style="text-decoration: none;">
+<img src="./img/content/product6.png" style="display: block; width: 265px;" alt="">
+</a>
+</td>
+</tr>
+
+<tr><td style="height: 15px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" >
+<tr>
+<td>
+<img src="./img/content/bonuses.png" style="width: 14px;" alt="">
+</td>
+<td style="width: 5px;"></td>
+<td style="padding: 0; font-size: 15px ; line-height: 22px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
++500 бонусов
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td style="font-size: 16px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Тумба прикроватная <br/>
+Орланд Wood
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 22px ; line-height: 32px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+9990 ₽
+</td>
+<td style="width: 14px;"></td>
+<td style="font-size: 16px ; line-height: 32px; text-decoration: line-through; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+11 990 ₽
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 27px;"></td></tr>
+
+<tr><td style="height: 8px;"></td></tr>
+
+<tr>
+<td style="text-align: center; border-width: 1px; border-radius: 4px; border-style: solid; border-color: #C4C4C4;">
+<a href="https://www.divan.ru/product/tumba-prikrovatnaya-orland-wood" target="_blank" style="display: block; margin: 0; text-align: center; font-weight: 600; text-decoration: none;  font-size: 16px ; line-height: 50px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Купить
+</a>
+</td>
+</tr>
+
+</table>
+</td>
+<!-- -6 -->
+</tr>
+</table>
+</td>
+</tr>
+<!-- -Products 5, 6 -->
+
+<tr><td style="height: 40px;"></td></tr>
+
+<!-- +Product 7 -->
+<tr>
+<td style="padding: 0 20px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<a href="https://www.divan.ru/product/krovat-raverti-legs-160-barhat-ginger" target="_blank" style="text-decoration: none;">
+<img src="./img/content/product7.png" style="display: block; width: 560px;" alt="">
+</a>                  
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="width: 265px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<img src="./img/content/bonuses.png" style="width: 14px;" alt="">
+</td>
+<td style="width: 5px;"></td>
+<td style="font-size: 15px ; line-height: 22px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
++1600 бонусов
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td style="font-size: 16px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Кровать <br/>
+Раверти-Legs 160 Barhat Ginger
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 22px ; line-height: 32px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+31 990 ₽
+</td>
+<td style="width: 14px;"></td>
+<td style="font-size: 16px ; line-height: 32px; text-decoration: line-through; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+46 990 ₽
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td style="width: 30px;"></td>
+<td style="vertical-align: top; width: 265px;">
+<table border="0" cellpadding="0" cellspacing="0">
+
+<tr align="center">
+<td style=" width: 265px; display: block; border-width: 1px; border-radius: 4px; border-style: solid; border-color: #C4C4C4; text-align: center;">
+<a href="https://www.divan.ru/product/krovat-raverti-legs-160-barhat-ginger" target="_blank" style="display: block; width: 265px; font-weight: 600; white-space: nowrap; text-decoration: none; font-size: 16px ; line-height: 50px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Купить
+</a>
+</td>
+</tr>
+
+<tr><td style="height: 10px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="width: 11px;">
+<img src="./img/content/sber.png" style="width: 11px;" alt="">
+</td>
+<td style="width: 8px;"></td>
+<td style="padding: 0; font-size: 13px ; line-height: 19px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #787878;">
+Рассрочка от <span style="color: #404040;"> 5332 ₽ в мес. </span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>    
+<tr><td style="height: 42px;"></td></tr>
+<!-- -Product 7 -->
+
+<tr><td style="height: 20px;"></td></tr>
+
+<!-- +Products 8, 9 -->
+<tr>
+<td style="padding: 0 20px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<!-- +8 -->
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+
+<tr>
+<td>
+<a href="https://www.divan.ru/product/krovat-foster-160-soft-toffe" target="_blank" style="text-decoration: none;">
+<img src="./img/content/product8.png" style="display: block; width: 265px;" alt="">
+</a>
+</td>
+</tr>
+
+<tr><td style="height: 15px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" >
+<tr>
+<td>
+<img src="./img/content/bonuses.png" style="width: 14px;" alt="">
+</td>
+<td style="width: 5px;"></td>
+<td style="padding: 0; font-size: 15px ; line-height: 22px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
++2200 бонусов
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td style="font-size: 16px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Кровать <br/>
+Фостер 160 Soft Toffe
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 22px ; line-height: 32px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+43 990 ₽
+</td>
+<td style="width: 14px;"></td>
+<td style="font-size: 16px ; line-height: 32px; text-decoration: line-through; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+58 990 ₽
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 8px;"></td></tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td style="width: 11px;">
+      <img src="./img/content/sber.png" style="width: 11px;" alt="">
+    </td>
+    <td style="width: 8px;"></td>
+    <td style="padding: 0; font-size: 13px ; line-height: 19px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #787878;">
+      Рассрочка от <span style="color: #404040;"> 7332 ₽ в мес. </span>
+    </td>
+  </tr>
+</table>
+</td>
+</tr>
+<tr><td style="height: 8px;"></td></tr>
+
+
+<tr>
+<td style="text-align: center; border-width: 1px; border-radius: 4px; border-style: solid; border-color: #C4C4C4;">
+<a href="https://www.divan.ru/product/krovat-foster-160-soft-toffe" target="_blank" style="display: block; margin: 0; text-align: center; font-weight: 600; text-decoration: none;  font-size: 16px ; line-height: 50px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Купить
+</a>
+</td>
+</tr>
+</table>
+</td>
+<!-- -8 -->
+
+<td style="width: 30px;"></td>
+
+<!-- +9 -->
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+
+<tr>
+<td>
+<a href="https://www.divan.ru/product/matras-minli-160x200" target="_blank" style="text-decoration: none;">
+<img src="./img/content/product9.png" style="display: block; width: 265px;" alt="">
+</a>
+</td>
+</tr>
+
+<tr><td style="height: 15px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" >
+<tr>
+<td>
+<img src="./img/content/bonuses.png" style="width: 14px;" alt="">
+</td>
+<td style="width: 5px;"></td>
+<td style="padding: 0; font-size: 15px ; line-height: 22px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
++650 бонусов
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td style="font-size: 16px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Матрас <br/>
+Минли 160x200
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 22px ; line-height: 32px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+12 990 ₽
+</td>
+<td style="width: 14px;"></td>
+<td style="font-size: 16px ; line-height: 32px; text-decoration: line-through; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+23 290 ₽
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 8px;"></td></tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td style="width: 11px;">
+      <img src="./img/content/sber.png" style="width: 11px;" alt="">
+    </td>
+    <td style="width: 8px;"></td>
+    <td style="padding: 0; font-size: 13px ; line-height: 19px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #787878;">
+      Рассрочка от <span style="color: #404040;"> 2165 ₽ в мес. </span>
+    </td>
+  </tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 8px;"></td></tr>
+
+<tr>
+<td style="text-align: center; border-width: 1px; border-radius: 4px; border-style: solid; border-color: #C4C4C4;">
+<a href="https://www.divan.ru/product/matras-minli-160x200" target="_blank" style="display: block; margin: 0; text-align: center; font-weight: 600; text-decoration: none;  font-size: 16px ; line-height: 50px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Купить
+</a>
+</td>
+</tr>
+
+</table>
+</td>
+<!-- -9 -->
+</tr>
+</table>
+</td>
+</tr>
+<!-- -Products 8, 9 -->
+
+<tr><td style="height: 40px;"></td></tr>
+
+<!-- +Product 10 -->
+<tr>
+<td style="padding: 0 20px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<a href="https://www.divan.ru/product/kushetka-norfolk-velvet-olive" target="_blank" style="text-decoration: none;">
+<img src="./img/content/product10.png" style="display: block; width: 560px;" alt="">
+</a>                  
+</td>
+</tr>
+<tr><td style="height: 20px;"></td></tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="width: 265px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<img src="./img/content/bonuses.png" style="width: 14px;" alt="">
+</td>
+<td style="width: 5px;"></td>
+<td style="font-size: 15px ; line-height: 22px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
++1050 бонусов
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td style="font-size: 16px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Кушетка <br/>
+Норфолк Velvet Olive
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 22px ; line-height: 32px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+20 990 ₽
+</td>
+<td style="width: 14px;"></td>
+<td style="font-size: 16px ; line-height: 32px; text-decoration: line-through; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+29 990 ₽
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td style="width: 30px;"></td>
+<td style="vertical-align: top; width: 265px;">
+<table border="0" cellpadding="0" cellspacing="0">
+
+<tr align="center">
+<td style=" width: 265px; display: block; border-width: 1px; border-radius: 4px; border-style: solid; border-color: #C4C4C4; text-align: center;">
+<a href="https://www.divan.ru/product/kushetka-norfolk-velvet-olive" target="_blank" style="display: block; width: 265px; font-weight: 600; white-space: nowrap; text-decoration: none; font-size: 16px ; line-height: 50px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Купить
+</a>
+</td>
+</tr>
+
+<tr><td style="height: 10px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="width: 11px;">
+<img src="./img/content/sber.png" style="width: 11px;" alt="">
+</td>
+<td style="width: 8px;"></td>
+<td style="padding: 0; font-size: 13px ; line-height: 19px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #787878;">
+Рассрочка от <span style="color: #404040;"> 3499 ₽ в мес. </span>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>    
+<tr><td style="height: 42px;"></td></tr>
+<!-- -Product 10 -->
+
+<tr><td style="height: 20px;"></td></tr>
+
+<!-- +Products 11, 12 -->
+<tr>
+<td style="padding: 0 20px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<!-- +11 -->
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+
+<tr>
+<td>
+<a href="https://www.divan.ru/product/kreslo-pajl-cozy-white" target="_blank" style="text-decoration: none;">
+<img src="./img/content/product11.png" style="display: block; width: 265px;" alt="">
+</a>
+</td>
+</tr>
+
+<tr><td style="height: 15px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" >
+<tr>
+<td>
+<img src="./img/content/bonuses.png" style="width: 14px;" alt="">
+</td>
+<td style="width: 5px;"></td>
+<td style="padding: 0; font-size: 15px ; line-height: 22px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
++1150 бонусов
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td style="font-size: 16px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Кресло <br/>
+Пайл Cozy White
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 22px ; line-height: 32px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+22 990 ₽
+</td>
+<td style="width: 14px;"></td>
+<td style="font-size: 16px ; line-height: 32px; text-decoration: line-through; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+26 990 ₽
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 8px;"></td></tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td style="width: 11px;">
+      <img src="./img/content/sber.png" style="width: 11px;" alt="">
+    </td>
+    <td style="width: 8px;"></td>
+    <td style="padding: 0; font-size: 13px ; line-height: 19px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #787878;">
+      Рассрочка от <span style="color: #404040;"> 3832 ₽ в мес. </span>
+    </td>
+  </tr>
+</table>
+</td>
+</tr>
+<tr><td style="height: 8px;"></td></tr>
+
+
+<tr>
+<td style="text-align: center; border-width: 1px; border-radius: 4px; border-style: solid; border-color: #C4C4C4;">
+<a href="https://www.divan.ru/product/kreslo-pajl-cozy-white" target="_blank" style="display: block; margin: 0; text-align: center; font-weight: 600; text-decoration: none;  font-size: 16px ; line-height: 50px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Купить
+</a>
+</td>
+</tr>
+</table>
+</td>
+<!-- -11 -->
+
+<td style="width: 30px;"></td>
+
+<!-- +12 -->
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+
+<tr>
+<td>
+<a href="https://www.divan.ru/product/kreslo-vitio-vertical-ink" target="_blank" style="text-decoration: none;">
+<img src="./img/content/product12.png" style="display: block; width: 265px;" alt="">
+</a>
+</td>
+</tr>
+
+<tr><td style="height: 15px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" >
+<tr>
+<td>
+<img src="./img/content/bonuses.png" style="width: 14px;" alt="">
+</td>
+<td style="width: 5px;"></td>
+<td style="padding: 0; font-size: 15px ; line-height: 22px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
++950 бонусов
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td style="font-size: 16px ; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Кресло <br/>
+Витио Vertical Ink
+</td>
+</tr>
+
+<tr><td style="height: 5px;"></td></tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 22px ; line-height: 32px; font-weight: 600; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+18 990 ₽
+</td>
+<td style="width: 14px;"></td>
+<td style="font-size: 16px ; line-height: 32px; text-decoration: line-through; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898;">
+20 990 ₽
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 8px;"></td></tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td style="width: 11px;">
+      <img src="./img/content/sber.png" style="width: 11px;" alt="">
+    </td>
+    <td style="width: 8px;"></td>
+    <td style="padding: 0; font-size: 13px ; line-height: 19px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #787878;">
+      Рассрочка от <span style="color: #404040;"> 3165 ₽ в мес. </span>
+    </td>
+  </tr>
+</table>
+</td>
+</tr>
+
+<tr><td style="height: 8px;"></td></tr>
+
+<tr>
+<td style="text-align: center; border-width: 1px; border-radius: 4px; border-style: solid; border-color: #C4C4C4;">
+<a href="https://www.divan.ru/product/kreslo-vitio-vertical-ink" target="_blank" style="display: block; margin: 0; text-align: center; font-weight: 600; text-decoration: none;  font-size: 16px ; line-height: 50px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">
+Купить
+</a>
+</td>
+</tr>
+
+</table>
+</td>
+<!-- -12 -->
+</tr>
+</table>
+</td>
+</tr>
+<!-- -Products 11, 12 -->
+
+<tr><td style="height: 30px;"></td></tr>
+
+<!-- +Condition-->
+<tr>
+<td style="font-size: 13px; text-align: center; line-height: 24px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #989898; padding: 0 50px;">
+Цены актуальны для&nbsp;Москвы, Санкт-Петербурга, Краснодара и&nbsp;ряда других регионов. Стоимость доставки в&nbsp;ваш&nbsp;город можно узнать на&nbsp;сайте 
+или&nbsp;по&nbsp;телефону.
+</td>
+</tr>
+<!-- -Condition-->
+
+<tr><td style="height: 20px;"></td></tr>
+
+<!-- +Button -->
+<tr align="center">
+<td style="width: 360px; padding: 0 20px;">
+<table border="0" cellpadding="0" cellspacing="0" style=" width: 320px;">
+<tbody>
+<tr>
+<td style="min-width: 320px; border-radius: 4px; background-color: #404040; text-align: center;">
+<a href="http://www.divan.ru/category/promo-letnij-market" 
+target="_blank" style="display: block; min-width: 320px;  white-space: nowrap; text-decoration: none; font-size: 18px ; line-height: 55px; font-weight: 500; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #fafafa;">
+Смотреть все
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- -Button -->
+
+
+<tr><td style="height: 60px;"></td></tr>
+
+
+<tr><td style="height: 20px; background-color: #D1CDCC;"></td></tr>
+
+<!-- +Footer -->
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="padding: 0 20px">
+<tr><td style="height: 30px"></td></tr>
+
+<tr>
+<td style="vertical-align:top">
+<table>
+<tr>
+<td align="left" style="width: 280px">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="padding-right: 8px;">
+<a href="https://t.me/officialdivanru" title="telegram" target="_blank" style="width: 40px; height: 40px; text-decoration: none;">
+<img src="img/footer/telegram.png" style="width: 40px;" alt="telegram" />
+</a>
+</td>
+<td style="padding-right: 8px;">
+<a href="https://www.youtube.com/channel/UCHmpEu-ysoKTMZvY9TMHj4g?sub_confirmation=1" title="youtube" target="_blank" style="width: 40px; height: 40px; text-decoration: none;">
+<img src="img/footer/youtube.png" style="width: 40px;" alt="youtube" />
+</a>
+</td>
+<td style="padding-right: 8px;">
+<a href="http://vk.com/ilovedivan" title="vk" target="_blank" style="width: 40px; height: 40px; text-decoration: none;">
+<img src="img/footer/vk.png" style="width: 40px;" alt="vk" />
+</a>
+</td>
+<td style="padding-right: 8px;">
+<a href="https://dzen.ru/divanru" title="dzen" target="_blank" style="width: 40px; height: 40px; text-decoration: none;">
+<img src="img/footer/dzen.png" style="width: 40px;" alt="dzen" />
+</a>
+</td>
+<td>
+<a href="https://pin.it/2esrMUt" title="pinterest" target="_blank" style="width: 40px; height: 40px; margin: 0; text-decoration: none;">
+<img src="img/footer/pinterest.png" style="width: 40px;" alt="pinterest" />
+</a>
+</td>                      
+</tr>
+</table>
+</td>
+<td align="right" style="width: 280px">
+<a href="https://market.yandex.ru/shop--divan-ru/309964/reviews" style="text-decoration: none; color: none;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 14px ; line-height: 21px; font-weight: 700; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">Читайте отзывы</td>
+</tr>
+<tr>
+<td style="height: 3px;"></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="font-size: 14px ; line-height: 21px; -webkit-text-size-adjust: none; font-family: Arial, Helvetica, sans-serif; color: #404040;">Яндекс.Маркет</td>
+<td style="width: 10px;"></td>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<img src="img/footer/star_full.png" style="width: 14px; padding-left: 1px;" alt="star">
+</td>
+<td>
+<img src="img/footer/star_full.png" style="width: 14px; padding-left: 1px;" alt="star">
+</td>
+<td>
+<img src="img/footer/star_full.png" style="width: 14px; padding-left: 1px;" alt="star">
+</td>
+<td>
+<img src="img/footer/star_full.png" style="width: 14px; padding-left: 1px;" alt="star">
+</td>
+<td>
+<img src="img/footer/star_half.png" style="width: 14px;" alt="star">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td style="height: 30px"></td></tr>
+<tr>
+<td>
+<a href="https://www.divan.ru/site/delivery" title="divan.ru/site/delivery" target="_blank" style="display: block;  height: 77px;  text-decoration: none;">
+<img src="img/footer/delivery_with_stop.gif" style="display: block;  height: 77px; border: 0; pointer-events: none;" alt="">
+</a>
+</td>
+</tr>
+<tr>
+<td style="width: 520px; display: block; margin: 0 20px; border-bottom: 1px solid #bfbfbf;"></td>
+</tr>
+<tr><td style="height: 20px"></td></tr>
+<tr>
+<td>
+<table align='center'>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 100%">
+<tr>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/akcii-skidki" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Акции
+</a>
+</td>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/category/divany-i-kresla" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Диваны
+</a>
+</td>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/category/stoly-i-stulya" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Столы и стулья
+</a>
+</td>
+<td style="padding-right: 35px; text-align: center;">
+<a href="https://www.divan.ru/category/kovry-i-tekstil" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Ковры и текстиль
+</a>
+</td>
+<td style="padding-right: 0px; text-align: center;">
+<a href="https://www.divan.ru/category/svet" target="_blank" style="text-decoration: none; color: #333333; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; font-size: 12px ; ">
+Освещение
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td style="height: 30px"></td></tr>
+<tr>
+<td align="center" style="width: 520px;  text-align: center; font-family: 'Arial', sans-serif; font-size: 14px ; -webkit-text-size-adjust: none; line-height: 21px; color: #989898;">
+Вы получили это письмо, потому что подписались на рассылку на сайте divan.ru. Если вы не хотите больше получать наши письма, 
+<a href="${Message.UnsubscribeLink}" target="_blank" style="width: 520px; color: #157EE9; text-decoration: underline;">
+отпишитесь.
+</a>
+</td>
+</tr>
+<tr><td style="height: 15px"></td></tr>
+<tr>
+<td align="center" style="width: 520px;  text-align: center;">
+<a href="${Message.AccessibilityLink}" target="_blank" style="display: inline-block; height: 29px; border-bottom: 1px solid #989898; font-family: 'Arial', sans-serif; font-size: 18px ; -webkit-text-size-adjust: none; line-height: 150%; padding: 0; color: #989898 ; text-decoration: none; ">
+Веб-версия
+</a>
+</td>
+</tr>
+<tr><td style="height: 30px"></td></tr>
+</table>
+</td>
+</tr>
+<!-- -Footer -->
+
+<tr><td style="height: 20px; background-color: #D1CDCC;"></td></tr>
+
+</table>
+</td>
+</tr>
+<!-- -Content -->
+</tbody>
+</table>
+</body>
+<div style="display:none; white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
+</html>
